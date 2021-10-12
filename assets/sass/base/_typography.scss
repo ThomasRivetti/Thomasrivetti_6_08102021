@@ -1,12 +1,53 @@
 //typo google font 
 @font-face {
     font-family: 'DM Sans';
-    src:url(../../fonts/DMSans-Regular.ttf) format('truetype');
+    src: url('../fonts/DMSans-Regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
+    font-family: 'DM Sans Medium';
+    src: url('../fonts/DMSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
     font-family: 'DM Sans Bold';
-    src:url(../../fonts/DMSans-Bold.ttf) format('truetype');
+    src: url('../fonts/DMSans-Bold.ttf') format('truetype');
     font-weight: 700;
 }
 
+html {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.main {
+    &__title {
+        text-align: right;
+        font-size: $font-size-main-title;
+        color: $primary-color;
+    }
+}
+.photographer {
+    &__tag {
+        font-size: 1.2rem;
+        font-family: 'DMSans Medium', sans-serif;
+        color: $primary-color;
+        line-height: 16px;
+        text-align: center;
+    }
+    &__name {
+        text-align: center;
+        font-size: $font-size-name;
+        color: $primary-text-color;
+    }
+    &__place {
+        font-size: 1.3rem;
+        color: $primary-color;
+    }
+    &__quote {
+        font-size: 1rem;
+    }
+    &__price {
+        font-size: 1rem;
+        color: lighten($color-dark, 46%);
+    }
+}

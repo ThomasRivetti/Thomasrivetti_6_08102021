@@ -1,0 +1,194 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+  display: flex;
+}
+
+/*
+couleurs: $secondary-text-color: hsla(0, 0%, 32%, 1);
+            #525252
+            $secondary-background-color: hsla(0, 0%, 98%, 1);
+            #fafafa
+*/
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "DM Sans Medium";
+  src: url("../fonts/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "DM Sans Bold";
+  src: url("../fonts/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+html {
+  font-family: "DM Sans", sans-serif;
+}
+
+.main__title {
+  text-align: right;
+  font-size: 3.6rem;
+  color: #911d1d;
+}
+
+.photographer__tag {
+  font-size: 1.2rem;
+  font-family: "DMSans Medium", sans-serif;
+  color: #911d1d;
+  line-height: 16px;
+  text-align: center;
+}
+.photographer__name {
+  text-align: center;
+  font-size: 3.6rem;
+  color: #d3573c;
+}
+.photographer__place {
+  font-size: 1.3rem;
+  color: #911d1d;
+}
+.photographer__quote {
+  font-size: 1rem;
+}
+.photographer__price {
+  font-size: 1rem;
+  color: #757575;
+}
+
+.hidden__link {
+  background-color: #db8876;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  margin: 5px auto 0 auto;
+}
+
+.header {
+  margin-left: 102px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+}
+.header__nav {
+  margin: auto 50px auto 102px;
+}
+.header__taglist {
+  display: flex;
+  flex-direction: row;
+}
+
+.main__title {
+  padding-right: 50px;
+}
+
+.photographer__blocklist {
+  position: relative;
+  top: -45px;
+}
+.photographer__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+.photographer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+.photographer__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  width: 310px;
+}
+.photographer__portrait {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.photographer__name {
+  padding: 1.6rem 0;
+}
+.photographer__quote {
+  width: 200px;
+  text-align: center;
+  white-space: normal;
+}
+.photographer__taglist {
+  display: flex;
+  flex-direction: row;
+}
+.photographer__tag {
+  border: 0.5px solid #cacaca;
+  border-radius: 11px;
+  padding: 0px 8px;
+  margin-right: 5px;
+}
+.photographer__tag:last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,84 @@
+.hidden {
+    &__link {
+       background-color: $secondary-color;
+       border-radius: 5px;
+       display: flex;
+       justify-content: center;
+       width: 20rem;
+       margin: 5px auto 0 auto;
+    }
+}
+.header {
+    margin-left: 102px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    &__nav {
+        margin: auto 50px auto 102px;        
+    }  
+    &__taglist {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.main {
+    &__title {
+         padding-right: 50px;
+     }
+}
+.photographer{
+    &__blocklist {
+        position: relative;
+        top: -45px;        
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 30px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    &__profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 250px;
+        width: 310px;
+    }
+    &__portrait {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;        
+    }
+    &__name {
+        padding: 1.6rem 0;
+    }
+    &__quote {
+        width: 200px;
+        text-align: center;
+        white-space: normal;
+    }
+    &__taglist {
+        display: flex;
+        flex-direction: row;
+    }
+    &__tag {
+        border: 0.5px solid #cacaca;
+        border-radius: 11px;
+        padding: 0px 8px;
+        margin-right: 5px;
+    }
+    &__tag:last-child {
+        margin-right: 0;
+    }
+}

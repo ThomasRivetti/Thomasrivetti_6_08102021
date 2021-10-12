@@ -1,2 +1,5 @@
-@import url(/assets/sass/base/_typography.scss);
-@import url(/assets/sass/utils/_variables.scss);
+@import './base/_reset';
+@import './utils/_variables';
+@import './base/_typography';
+@import './base/_base';
+@import './pages/_home';

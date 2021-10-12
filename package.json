@@ -1,0 +1,19 @@
+{
+  "name": "thomasrivetti_p6_08102021",
+  "version": "1.0.0",
+  "description": "Notes - Réunion client FishEye",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasRivetti/Thomasrivetti_6_08102021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasRivetti/Thomasrivetti_6_08102021/issues"
+  },
+  "homepage": "https://github.com/ThomasRivetti/Thomasrivetti_6_08102021#readme"
+}

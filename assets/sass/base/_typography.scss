@@ -1,53 +1,72 @@
 //typo google font 
 @font-face {
-    font-family: 'DM Sans';
+    font-family: 'DMSans';
     src: url('../fonts/DMSans-Regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
-    font-family: 'DM Sans Medium';
+    font-family: 'DMSans Medium';
     src: url('../fonts/DMSans-Medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
-    font-family: 'DM Sans Bold';
+    font-family: 'DMSans Bold';
     src: url('../fonts/DMSans-Bold.ttf') format('truetype');
     font-weight: 700;
 }
 
 html {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DMSans', sans-serif;
 }
 
 .main {
     &__title {
         text-align: right;
-        font-size: $font-size-main-title;
+        font-size: $font-size-title*3;
         color: $primary-color;
     }
 }
 .photographer {
-    &__tag {
-        font-size: 1.2rem;
+    &__tag {        
         font-family: 'DMSans Medium', sans-serif;
         color: $primary-color;
         line-height: 16px;
         text-align: center;
     }
     &__name {
-        text-align: center;
-        font-size: $font-size-name;
+        font-size: $font-size-title*3;
         color: $primary-text-color;
+        &--home {
+            text-align: center;
+        }
+        &--phPage {
+            font-size: $font-size-text*4;
+        }
     }
-    &__place {
-        font-size: 1.3rem;
+    &__place {        
         color: $primary-color;
+        &--phPage {
+            font-size: $font-size-title*2;
+        }
     }
     &__quote {
-        font-size: 1rem;
+        text-align: center;
+        white-space: normal;
+        &--phPage {
+            text-align: left;
+        }
     }
     &__price {
-        font-size: 1rem;
         color: lighten($color-dark, 46%);
-    }
+    }  
+}
+.work {
+    &__likes {
+        font-size: $font-size-title*2;
+        font-family: 'DMSans Medium', sans-serif;
+    }   
+}
+.info {
+    font-size: $font-size-title*2;
+    font-family: 'DMSans Medium', sans-serif;
 }

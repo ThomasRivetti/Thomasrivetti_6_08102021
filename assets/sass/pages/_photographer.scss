@@ -1,0 +1,26 @@
+.photographer {
+    &__block--phPage {
+        display: flex;
+        justify-content: space-between;
+        width: 1240px;
+        margin: 0 auto;
+    }
+}
+.work {
+    &__blocklist {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__img {
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+    }
+    &__video {
+        width: 350px;
+        height: 300px;
+    }
+    &__legend {
+        display: flex;
+    }
+}

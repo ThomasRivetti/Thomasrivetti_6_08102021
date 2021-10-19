@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/4c0cc489d0.js" crossorigin="anonymous"></script>
+    <title>FISHEYE Photographe</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header__logo">
+            <img src="/assets/img/Logo/logo.svg" alt="Fisheye Home Page">
+        </a>
+    </header>
+    <main>
+        <section class="photographer__block--phPage">
+            <div class="photographer__info--phPage">
+                <h1 class="photographer__name photographer__name--phPage">Mimi Keel</h1>
+                <p class="photographer__place photographer__place--phPage">London, UK</p>
+                <p class="photographer__quote photographer__quote--phPage">Voir le beau dans le quotidien</p>
+                <ul class="photographer__taglist photographer__taglist--phpage">
+                    <li class="photographer__tag">
+                        <span aria-label="Triez les photographes sur le thème des portraits">#Portrait</span>
+                    </li>         
+                    <li class="photographer__tag">
+                        <span aria-label="Triez les photographes sur le thème des voyages">#Travel</span>
+                    </li>
+                    <li class="photographer__tag">
+                        <span aria-label="Triez les photographes sur le thème des animaux">#Animals</span>
+                    </li>
+                    <li class="photographer__tag">
+                        <span aria-label="Triez les photographes sur le thème des évènements">#Events</span>
+                    </li>               
+                </ul>
+            </div>
+            <button class="contactModal">Contactez-moi</button>
+            <img src="/assets/img/Photographers_ID_Photos/MimiKeel.jpg" alt="photographie du profit de Mimi Keel" class="photographer__portrait">
+        </section>
+        <section class="work">
+            <div class="dropdown__filters">
+                <label for="dropdownMenu">Triez par</label>
+                <select name="dropdownMenu" id="dropdownMenu">
+                    <option value="popularity">Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="title">Titre</option>
+                </select>
+            </div>
+            <div class="work__blocklist">
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Animals_Rainbow.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Rainbow</h2>
+                        <p class="work__likes">59</p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <video controls muted class="work__video">
+                            <source src="./assets/img/Sample Photos/Mimi/Animals_Wild_Horses_in_the_mountains.mp4" 
+                                    type="video/mp4">
+                        </video>                        
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Wild horses in the mountains</h2>
+                        <p class="work__likes">142</p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Event_BenevidesWedding.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Benevides wedding</h2>
+                        <p class="work__likes">77</p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Event_PintoWedding.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Pinto wedding</h2>
+                        <p class="work__likes"></p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Event_SeasideWedding.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Seaside wedding</h2>
+                        <p class="work__likes"></p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Portrait_Background.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Background</h2>
+                        <p class="work__likes"></p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Portrait_Nora.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Nora</h2>
+                        <p class="work__likes"></p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Portrait_Wednesday.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Wendesday</h2>
+                        <p class="work__likes"></p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Travel_HillsideColor.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Hillside color</h2>
+                        <p class="work__likes"></p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+                <article class="work__block">
+                    <a href="#">
+                        <img src="./assets/img/Sample Photos/Mimi/Travel_Lonesome.jpg" alt="" class="work__img">
+                    </a>
+                    <div class="work__legend">
+                        <h2 class="work__name">Lonesome</h2>
+                        <p class="work__likes"></p>
+                        <i class="far fa-heart" aria-label="likes"></i>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <aside class="info">
+            <div class="info__likes">
+                <p class="info__totalLikes">000</p>
+                <i class="fas fa-heart"></i>
+            </div>
+            <p class="info__price"> 400€/jour</p>
+        </aside>
+    </main>
+    
+</body>
+</html>

@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65%;
+    
     &__nav {
         margin: auto 50px auto 102px;        
     }  
@@ -30,7 +30,9 @@
 .photographer{
     &__blocklist {
         position: relative;
-        top: -45px;        
+        top: -45px; 
+        max-width: 1440px;
+        margin: 0 auto;       
     }
     &__list {
         display: flex;
@@ -64,9 +66,7 @@
         padding: 1.6rem 0;
     }
     &__quote {
-        width: 200px;
-        text-align: center;
-        white-space: normal;
+        width: 200px;        
     }
     &__taglist {
         display: flex;

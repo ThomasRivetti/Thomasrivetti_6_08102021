@@ -135,6 +135,36 @@ html {
   font-family: "DMSans Medium", sans-serif;
 }
 
+.modal__title {
+  font-size: 6.4rem;
+  font-weight: normal;
+  font-family: "DMSans Regular", sans-serif;
+  line-height: 1;
+}
+.modal__btn {
+  font-family: "DMSans-Bold", sans-serif;
+}
+
+.form {
+  font-size: 3.6rem;
+}
+.form__input::placeholder {
+  font-size: 2.4rem;
+}
+
+.modal__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  background-color: #911d1d;
+  color: white;
+  width: 170px;
+  height: 69px;
+  border-radius: 5px;
+  border: none;
+}
+
 .hidden__link {
   background-color: #db8876;
   border-radius: 5px;
@@ -238,6 +268,42 @@ html {
 }
 .work__legend {
   display: flex;
+}
+
+.modal {
+  max-width: 670px;
+  max-height: 900px;
+  background-color: #db8876;
+  padding: 20px;
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.modal__close {
+  width: 42px;
+  height: 42px;
+}
+.modal__title {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+}
+
+.form__label {
+  margin-bottom: 15px;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.form__input {
+  height: 68px;
+}
+.form__input--msg {
+  height: 170px;
 }
 
 /*# sourceMappingURL=style.css.map */

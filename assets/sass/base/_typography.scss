@@ -70,3 +70,20 @@ html {
     font-size: $font-size-title*2;
     font-family: 'DMSans Medium', sans-serif;
 }
+.modal {
+    &__title {
+        font-size: $font-size-text*4;
+        font-weight: normal;
+        font-family: 'DMSans Regular', sans-serif;
+        line-height: 1;
+    }
+    &__btn {
+        font-family: 'DMSans-Bold', sans-serif;
+    }
+}
+.form {
+    font-size: $font-size-title*3;
+    &__input::placeholder {
+        font-size: $font-size-title*2;
+    }
+}

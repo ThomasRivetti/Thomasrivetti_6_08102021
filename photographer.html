@@ -35,7 +35,7 @@
                     </li>               
                 </ul>
             </div>
-            <button class="contactModal">Contactez-moi</button>
+            <button class="open__modal modal__btn" id="openModalBtn">Contactez-moi</button>
             <img src="/assets/img/Photographers_ID_Photos/MimiKeel.jpg" alt="photographie du profit de Mimi Keel" class="photographer__portrait">
         </section>
         <section class="work">
@@ -161,6 +161,37 @@
             <p class="info__price"> 400€/jour</p>
         </aside>
     </main>
+    <div id="contactModal" class="modal">
+        <main class="modal__content">
+            <header class="modal__header">
+                <h1 class="modal__title">
+                    <span>Contactez-moi</span>
+                    <span id="modalPhotographerName">Mimi Keel</span>
+                </h1>
+                <img id="closeModal" class="modal__close"src="./assets/img/components/closeModal.svg"></img>
+            </header>
+            <form class="form">
+                <div class="form__field">
+                    <label for="firstname" class="form__label">Prénom</label>
+                    <input type="text" name="firstname" id="firstnameInput" class="form__input" placeholder="Prénom" required>
+                </div>
+                <div class="form__field">
+                    <label for="lastname" class="form__label">Nom</label>
+                    <input type="text" name="lastname" id="lastnameInput" class="form__input" placeholder="Nom" required>
+                </div>
+                <div class="form__field">
+                    <label for="mail" class="form__label">Email</label>
+                    <input type="text" name="email" id="emailInput" class="form__input" placeholder="exemple@email.com" required>
+                </div>
+                <div class="form__field">
+                    <label for="message" class="form__label">Votre message</label>
+                    <input type="text" name="message" id="messageInput" class="form__input form__input--msg" placeholder="Votre message">
+                </div>
+                <button class="modal__btn" id="sendBtn">Envoyer</button>
+            </form>
+        </main>
+        
+    </div>
     
 </body>
 </html>

@@ -1,0 +1,38 @@
+.modal {
+    // display: none;
+    max-width: 670px;
+    max-height: 900px;
+    background-color: $secondary-color;
+    padding: 20px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    &__close {
+        width: 42px;
+        height: 42px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        height: 140px;
+    }
+}
+.form {
+    &__label {
+        margin-bottom: 15px;
+    }
+    &__field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    &__input {
+        height: 68px;
+        &--msg {
+            height: 170px;
+        }
+    } 
+}

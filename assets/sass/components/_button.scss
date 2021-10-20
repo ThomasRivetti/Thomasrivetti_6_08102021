@@ -1,0 +1,14 @@
+.modal {
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-title*1.5;
+        background-color: $primary-color;
+        color: white;
+        width: 170px;
+        height: 69px;
+        border-radius: 5px;
+        border: none;
+    }
+}

@@ -10,6 +10,12 @@
     &__blocklist {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        width: 1240px;
+        margin: 0  auto;
+    }
+    &__block {
+        padding: 20px;
     }
     &__img {
         width: 350px;
@@ -21,6 +27,16 @@
         height: 300px;
     }
     &__legend {
+        display: flex;
+        
+    }
+    &__likes {
+        margin-left: auto;
+    }
+}
+.info {
+    display: flex;
+    &__likes{
         display: flex;
     }
 }

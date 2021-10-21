@@ -125,6 +125,9 @@ html {
   color: #757575;
 }
 
+.work__legend {
+  color: #911d1d;
+}
 .work__likes {
   font-size: 2.4rem;
   font-family: "DMSans Medium", sans-serif;
@@ -256,6 +259,12 @@ html {
 .work__blocklist {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1240px;
+  margin: 0 auto;
+}
+.work__block {
+  padding: 20px;
 }
 .work__img {
   width: 350px;
@@ -267,6 +276,16 @@ html {
   height: 300px;
 }
 .work__legend {
+  display: flex;
+}
+.work__likes {
+  margin-left: auto;
+}
+
+.info {
+  display: flex;
+}
+.info__likes {
   display: flex;
 }
 

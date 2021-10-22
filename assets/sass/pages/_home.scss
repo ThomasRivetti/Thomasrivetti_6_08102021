@@ -9,7 +9,6 @@
     }
 }
 .header {
-    margin-left: 102px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,31 +21,34 @@
         flex-direction: row;
     }
 }
-.main {
-    &__title {
-         padding-right: 50px;
-     }
-}
 .photographer{
     &__blocklist {
         position: relative;
         top: -45px; 
         max-width: 1440px;
-        margin: 0 auto;       
+        margin: 0 auto;
+        padding: 35px 70px;       
     }
+    
+    
     &__list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 30px;
+        margin-top: 60px;
+        & >a {
+            width: 350px;
+        }
     }
     &__info {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 30px;
+        padding-bottom: 35px;
+        
+        
     }
     &__profile {
         display: flex;

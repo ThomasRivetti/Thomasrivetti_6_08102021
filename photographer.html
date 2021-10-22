@@ -40,8 +40,8 @@
         </section>
         <section class="work">
             <div class="dropdown__filters">
-                <label for="dropdownMenu">Triez par</label>
-                <select name="dropdownMenu" id="dropdownMenu">
+                <label for="dropdownMenu" class="dropdown__label">Triez par</label>
+                <select name="dropdownMenu" id="dropdownMenu" class="dropdown__list">
                     <option value="popularity">Popularité</option>
                     <option value="date">Date</option>
                     <option value="title">Titre</option>
@@ -87,7 +87,7 @@
                     </a>
                     <div class="work__legend">
                         <h2 class="work__name">Pinto wedding</h2>
-                        <p class="work__likes"></p>
+                        <p class="work__likes">35</p>
                         <i class="far fa-heart" aria-label="likes"></i>
                     </div>
                 </article>
@@ -97,7 +97,7 @@
                     </a>
                     <div class="work__legend">
                         <h2 class="work__name">Seaside wedding</h2>
-                        <p class="work__likes"></p>
+                        <p class="work__likes">80</p>
                         <i class="far fa-heart" aria-label="likes"></i>
                     </div>
                 </article>
@@ -107,7 +107,7 @@
                     </a>
                     <div class="work__legend">
                         <h2 class="work__name">Background</h2>
-                        <p class="work__likes"></p>
+                        <p class="work__likes">60</p>
                         <i class="far fa-heart" aria-label="likes"></i>
                     </div>
                 </article>
@@ -117,7 +117,7 @@
                     </a>
                     <div class="work__legend">
                         <h2 class="work__name">Nora</h2>
-                        <p class="work__likes"></p>
+                        <p class="work__likes">81</p>
                         <i class="far fa-heart" aria-label="likes"></i>
                     </div>
                 </article>
@@ -127,7 +127,7 @@
                     </a>
                     <div class="work__legend">
                         <h2 class="work__name">Wendesday</h2>
-                        <p class="work__likes"></p>
+                        <p class="work__likes">49</p>
                         <i class="far fa-heart" aria-label="likes"></i>
                     </div>
                 </article>
@@ -137,7 +137,7 @@
                     </a>
                     <div class="work__legend">
                         <h2 class="work__name">Hillside color</h2>
-                        <p class="work__likes"></p>
+                        <p class="work__likes">38</p>
                         <i class="far fa-heart" aria-label="likes"></i>
                     </div>
                 </article>
@@ -147,18 +147,20 @@
                     </a>
                     <div class="work__legend">
                         <h2 class="work__name">Lonesome</h2>
-                        <p class="work__likes"></p>
+                        <p class="work__likes">69</p>
                         <i class="far fa-heart" aria-label="likes"></i>
                     </div>
                 </article>
             </div>
         </section>
         <aside class="info">
-            <div class="info__likes">
-                <p class="info__totalLikes">000</p>
-                <i class="fas fa-heart"></i>
+            <div class="info__block">
+                <div class="info__likes">
+                    <p class="info__totalLikes">000</p>
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p class="info__price"> 400€/jour</p>
             </div>
-            <p class="info__price"> 400€/jour</p>
         </aside>
     </main>
     <div id="contactModal" class="modal">

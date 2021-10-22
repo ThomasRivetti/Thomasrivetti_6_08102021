@@ -60,13 +60,31 @@ html {
         color: lighten($color-dark, 46%);
     }  
 }
+.dropdown {
+    &__filters {
+        font-size: $font-size-title*1.5;
+        font-family: 'DMSans Bold', sans-serif;
+    }
+    &__list {
+        font-size: $font-size-title*1.5;
+        font-family: 'DMSans Bold', sans-serif;
+        color: white;        
+    }
+}
 .work {
     &__legend {
-        color: $primary-color;
+        color: $primary-color;        
+    }
+    &__name {
+        font-size: $font-size-title*1.5;
     }
     &__likes {
-        font-size: $font-size-title*2;
+        font-size: $font-size-title*1.5;
         font-family: 'DMSans Medium', sans-serif;
+        i {
+            font-size: $font-size-title*1.5;
+
+        }
     }   
 }
 .info {

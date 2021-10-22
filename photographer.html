@@ -163,7 +163,7 @@
             </div>
         </aside>
     </main>
-    <div id="contactModal" class="modal">
+    <div id="contactModal" class="modal" hidden="true">
         <main class="modal__content">
             <header class="modal__header">
                 <h1 class="modal__title">
@@ -194,6 +194,16 @@
         </main>
         
     </div>
-    
+    <div id="lightboxModal" class="lightbox__modal" hidden="true">
+        <div class="lightbox__body" role="dialog">
+            <button class="fas fa-times lightbox__btn lightbox__btn--close" role="button" title="Close dialog"></button>
+            <button class="fas fa-chevron-left lightbox__btn lightbox__btn--left" role="button" title="Previous image"></button>
+            <button class="fas fa-chevron-right lightbox__btn lightbox__btn--right" role="button" title="Next image"></button>
+            <div class="lightbox__mediaBox">
+                <img src="./assets/img/Sample Photos/Mimi/Animals_Rainbow.jpg" alt="Rainbow bird" role="button" class="lightbox__media">
+            </div>
+            <div id="imageName" class="lightbox__mediaName">Rainbow bird</div>
+        </div>
+    </div>
 </body>
 </html>

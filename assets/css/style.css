@@ -171,6 +171,12 @@ html {
   font-size: 2.4rem;
 }
 
+.lightbox__mediaName {
+  color: #911d1d;
+  font-size: 3.2rem;
+  text-align: center;
+}
+
 .modal__btn {
   display: flex;
   justify-content: center;
@@ -182,6 +188,28 @@ html {
   height: 69px;
   border-radius: 5px;
   border: none;
+}
+
+.lightbox__btn {
+  background-color: transparent;
+  border: transparent;
+  color: #911d1d;
+  font-size: 4.8rem;
+}
+.lightbox__btn--close {
+  position: absolute;
+  right: -3rem;
+  top: 0.5rem;
+}
+.lightbox__btn--left {
+  left: -3rem;
+  position: absolute;
+  top: 48%;
+}
+.lightbox__btn--right {
+  position: absolute;
+  right: -3rem;
+  top: 48%;
 }
 
 body {
@@ -385,6 +413,33 @@ body {
 }
 .form__input--msg {
   height: 170px;
+}
+
+.lightbox {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.lightbox__body {
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  height: 90%;
+  background-color: white;
+}
+.lightbox__mediaBox {
+  background-color: rgba(255, 255, 255, 0);
+  height: 90%;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+.lightbox__media {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

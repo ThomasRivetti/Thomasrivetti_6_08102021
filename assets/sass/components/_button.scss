@@ -12,3 +12,28 @@
         border: none;
     }
 }
+
+.lightbox {
+    &__btn {
+        background-color: transparent;
+        border: transparent;
+        color: $primary-color;
+        font-size: $font-size-text*3;
+    }
+
+    &__btn--close {
+        position: absolute;
+        right: -3rem;
+        top: .5rem;
+    }
+    &__btn--left {
+        left: -3rem;
+        position: absolute;
+        top: 48%;
+    }
+    &__btn--right {
+        position: absolute;
+        right: -3rem;
+        top: 48%;   
+    }
+}

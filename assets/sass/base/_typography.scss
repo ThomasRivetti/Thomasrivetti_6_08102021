@@ -108,3 +108,10 @@ html {
         font-size: $font-size-title*2;
     }
 }
+.lightbox {
+    &__mediaName {
+        color: $primary-color;
+        font-size: $font-size-text*2;
+        text-align: center;
+    }
+}

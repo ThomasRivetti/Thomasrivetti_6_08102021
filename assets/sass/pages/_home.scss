@@ -1,3 +1,4 @@
+
 .hidden {
     &__link {
        background-color: $secondary-color;
@@ -10,33 +11,80 @@
 }
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+    flex-direction: row;
+    margin: 0 auto;
     &__nav {
-        margin: auto 50px auto 102px;        
+        margin: 0 auto;
+        display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        align-items: center;
+        max-width: 1440px;      
+    }
+    &__title {
+        order: 3;
     }  
     &__taglist {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        margin: 0 auto;
     }
 }
-.photographer{
-    &__blocklist {
-        position: relative;
-        top: -45px; 
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 35px 70px;       
+@media screen and (max-width: 1211px) {
+    .header {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        &__nav {
+            flex-wrap: wrap;
+        }
+        &__logo {
+            order: 1;
+        }
+        &__title {
+            order: 2;
+            width: fit-content;
+            margin-left: auto;
+        }
+        &__taglist {
+            order: 3;
+            width: 100%;
+            margin: 20px auto 0;
+            flex-wrap: wrap;
+        }
+    }
+}
+@media screen and (max-width: 860px) {
+    .header {
+        &__taglist {
+            width: 100%;
+        }
+    }  
+}
+@media screen and (max-width: 550px) {
+    .header {
+        &__title {
+            margin-left: auto;
+        }
     }
     
-    
+}
+
+
+
+.photographer{
+    &__blocklist {
+        max-width: 1240px;
+        margin: 0 auto;      
+    }    
     &__list {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
-        margin-top: 60px;
+        margin: 60px auto 0;
         & >a {
             width: 350px;
         }
@@ -78,7 +126,7 @@
         border: 0.5px solid #cacaca;
         border-radius: 11px;
         padding: 0px 8px;
-        margin-right: 5px;
+        margin: 0 5px;
     }
     &__tag:last-child {
         margin-right: 0;

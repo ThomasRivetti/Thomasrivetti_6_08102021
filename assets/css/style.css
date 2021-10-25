@@ -86,12 +86,20 @@ html {
   font-family: "DMSans", sans-serif;
 }
 
-.main__title {
-  text-align: right;
+.header__title {
+  text-align: center;
   font-size: 3.6rem;
   color: #911d1d;
 }
 
+@media screen and (max-width: 550px) {
+  .header__logo img {
+    width: 75%;
+  }
+  .header__title {
+    font-size: 14px;
+  }
+}
 .photographer__tag {
   font-family: "DMSans Medium", sans-serif;
   color: #911d1d;
@@ -229,30 +237,70 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
 }
 .header__nav {
-  margin: auto 50px auto 102px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+}
+.header__title {
+  order: 3;
 }
 .header__taglist {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
+@media screen and (max-width: 1211px) {
+  .header {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .header__nav {
+    flex-wrap: wrap;
+  }
+  .header__logo {
+    order: 1;
+  }
+  .header__title {
+    order: 2;
+    width: fit-content;
+    margin-left: auto;
+  }
+  .header__taglist {
+    order: 3;
+    width: 100%;
+    margin: 20px auto 0;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 860px) {
+  .header__taglist {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header__title {
+    margin-left: auto;
+  }
+}
 .photographer__blocklist {
-  position: relative;
-  top: -45px;
-  max-width: 1440px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 35px 70px;
 }
 .photographer__list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin: 60px auto 0;
 }
 .photographer__list > a {
   width: 350px;
@@ -292,7 +340,7 @@ body {
   border: 0.5px solid #cacaca;
   border-radius: 11px;
   padding: 0px 8px;
-  margin-right: 5px;
+  margin: 0 5px;
 }
 .photographer__tag:last-child {
   margin-right: 0;

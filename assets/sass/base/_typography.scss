@@ -19,12 +19,24 @@ html {
     font-family: 'DMSans', sans-serif;
 }
 
-.main {
+.header {
     &__title {
-        text-align: right;
+        text-align: center;
         font-size: $font-size-title*3;
         color: $primary-color;
     }
+}
+@media screen and (max-width: 550px) {
+    .header {
+        &__logo img{
+            width: 75%;
+            
+        }
+        &__title {
+            font-size: 14px;
+        }
+    }
+    
 }
 .photographer {
     &__tag {        

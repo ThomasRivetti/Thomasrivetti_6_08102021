@@ -28,10 +28,6 @@ html {
 }
 @media screen and (max-width: 550px) {
     .header {
-        &__logo img{
-            width: 75%;
-            
-        }
         &__title {
             font-size: 14px;
         }
@@ -71,6 +67,13 @@ html {
     &__price {
         color: lighten($color-dark, 46%);
     }  
+}
+@media screen and (max-width: 550px) {
+    .photographer {
+        &__name--phPage {
+            font-size: $font-size-title*3;
+        }
+    }
 }
 .dropdown {
     &__filters {

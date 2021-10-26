@@ -76,7 +76,7 @@
 
 .photographer{
     &__blocklist {
-        max-width: 1240px;
+        max-width: 1340px;
         margin: 0 auto;      
     }    
     &__list {
@@ -115,9 +115,7 @@
     &__name {
         padding: 1.6rem 0;
     }
-    &__quote {
-        width: 200px;        
-    }
+    
     &__taglist {
         display: flex;
         flex-direction: row;

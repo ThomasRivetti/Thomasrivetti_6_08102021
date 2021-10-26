@@ -12,6 +12,21 @@
         border: none;
     }
 }
+@media screen and (max-width: 860px) {
+    .modal {
+        &__btn {
+            width: 200px;
+            height: 35px;
+            position: fixed;
+            bottom: 10%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translateY(-10%);      
+        }
+    }
+    
+}
 
 .lightbox {
     &__btn {

@@ -1,12 +1,11 @@
 
 .photographer {
-    
     &__block--phPage {
         display: flex;
         justify-content: space-between;
-        width: 1440px;
+        max-width: 1240px;
         margin: 0 auto 30px auto;
-        padding: 15px 30px;
+        padding: 20px 5px;
         background-color: lighten($color-dark, 98%);
     }
     &__info--phPage{
@@ -17,13 +16,30 @@
         width: auto;
         margin: auto 0 16px;
     }
+    &__tag {
+        margin: 0 5px 0 0;
+
+    }
+}
+@media screen and (max-width: 550px) {
+    .photographer {
+        &__portrait {
+            width: 100px;
+            height: 100px;   
+        }
+        &__taglist {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    
 }
 .work {
     &__blocklist {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 1340px;
+        max-width: 1240px;
         margin: 0 auto;
     }
     &__block {
@@ -43,6 +59,7 @@
         width: 350px;
         height: 300px;
         object-fit: cover;
+        border-radius: 5px;
 
     }
     &__legend {
@@ -50,12 +67,31 @@
         align-items: center;
         :last-child {
             margin-left: 5px;
-        }
-        
+        }    
     }
     &__likes {
         margin-left: auto;
     }
+}
+
+ @media screen and (max-width: 860px) {
+    .work {
+        &__blocklist {
+            justify-content: center;
+            width: auto;
+        }
+        &__block {
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__img  {
+            width: 100%;
+        }
+        &__video {
+            width: 100%;
+        }
+    }
+    
 }
 .dropdown {
     &__list {
@@ -63,6 +99,14 @@
         border-radius: 5px;
         border: none;
     }
+}
+@media screen and (max-width: 550px) {
+    .dropdown {
+        &__filters{
+            display: none;
+        }
+    }
+    
 }
 .info {
     display: flex;
@@ -84,5 +128,12 @@
     }
     &__likes{
         display: flex;
+    }
+}
+@media screen and (max-width:860px) {
+    .info {
+        &__block {
+            position: static;
+        }
     }
 }

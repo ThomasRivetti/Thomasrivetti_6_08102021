@@ -20,6 +20,11 @@ function launchModal() {
   contactModal.style.display = "block";
 }
 
+closeModalBtn.addEventListener("click", closeModal);//principale croix
+function closeModal() {
+  contactModal.style.display = "none";
+}
+
 
 //checking Input Firstname
 firstNameInput.addEventListener("blur", function(){

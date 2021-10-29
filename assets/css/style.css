@@ -488,6 +488,7 @@ body {
   }
 }
 .modal {
+  display: none;
   width: 670px;
   height: auto;
   background-color: #db8876;

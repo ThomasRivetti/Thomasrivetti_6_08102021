@@ -1,17 +1,19 @@
 .modal {
-    // display: none;
-    max-width: 670px;
-    max-height: 900px;
+    width: 670px;
+    height: auto;
     background-color: $secondary-color;
-    padding: 20px;
+    padding: 30px;
+    position: fixed; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     &__header {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
     }
     &__close {
-        width: 42px;
-        height: 42px;
+        width: 30px;
+        height: 30px;
     }
 
     &__title {
@@ -28,11 +30,46 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
+
     }
     &__input {
         height: 68px;
         &--msg {
             height: 170px;
         }
+    }
+    &__error {
+        color: $color-dark;
+        padding-top: 5px;
+
     } 
+}
+
+input[data-error]::after {
+    content: attr(data-error);
+}
+
+
+.form__field[data-error]::after {
+content: attr(data-error);
+font-size: 0.4em;
+color: #e54858;
+display: block;
+margin-top: 7px;
+margin-bottom: 7px;
+text-align: right;
+line-height: 0.3;
+opacity: 0;
+transition: 0.3s;
+}
+.form__field[data-error-visible="true"]::after {
+opacity: 1;
+}
+.form__field[data-error-visible="true"] .form__input {
+border: 5px solid $primary-color;
+background-color: lightgrey;
+}
+.form__field[data-error-visible="false"] .form__input {
+border: 5px solid green;
+background-color: -internal-dark( white), white;
 }

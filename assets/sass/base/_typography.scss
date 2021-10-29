@@ -110,17 +110,28 @@ html {
     &__title {
         font-size: $font-size-text*4;
         font-weight: normal;
-        font-family: 'DMSans Regular', sans-serif;
+        font-family: 'DMSans', sans-serif;
         line-height: 1;
     }
     &__btn {
-        font-family: 'DMSans-Bold', sans-serif;
+        font-family: 'DMSans Bold', sans-serif;
     }
 }
 .form {
     font-size: $font-size-title*3;
+    font-family: 'DMSans', sans-serif;
+    &__input {
+        font-size: $font-size-text*1.5;
+        font-family: 'DMSans Medium', sans-serif;
+        
+    }
     &__input::placeholder {
         font-size: $font-size-title*2;
+    }
+    &__error {
+        font-size: $font-size-title*1.5;
+        font-family:'DMSans Medium', sans-serif;
+        text-align: center;
     }
 }
 .lightbox {

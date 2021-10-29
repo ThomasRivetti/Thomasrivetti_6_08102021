@@ -40,7 +40,7 @@
     }
     &__error {
         color: $color-dark;
-        padding-top: 5px;
+        padding: 5px 0 10px;
 
     } 
 }
@@ -49,19 +49,6 @@ input[data-error]::after {
     content: attr(data-error);
 }
 
-
-.form__field[data-error]::after {
-content: attr(data-error);
-font-size: 0.4em;
-color: #e54858;
-display: block;
-margin-top: 7px;
-margin-bottom: 7px;
-text-align: right;
-line-height: 0.3;
-opacity: 0;
-transition: 0.3s;
-}
 .form__field[data-error-visible="true"]::after {
 opacity: 1;
 }
@@ -71,5 +58,5 @@ background-color: lightgrey;
 }
 .form__field[data-error-visible="false"] .form__input {
 border: 5px solid green;
-background-color: -internal-dark( white), white;
+padding-left: 10px;
 }

@@ -8,7 +8,7 @@
         "tags": ["portrait", "events", "travel", "animals"],
         "tagline": "Voir le beau dans le quotidien",
         "price": 400,
-        "portrait": "assets/img/Photographer_ID_Photos/MimiKeel.jpg",
+        "portrait": "./assets/img/Photographers_ID_Photos/MimiKeel.jpg",
         "alt": "Mimi Keel portrait"
       },
       {
@@ -19,7 +19,7 @@
         "tags": ["sports", "architecture"],
         "tagline": "Capturer des compositions complexes",
         "price": 250,
-        "portrait": "assets/img/Photographer_ID_Photos/EllieRoseWilkens.jpg",
+        "portrait": "assets/img/Photographers_ID_Photos/EllieRoseWilkens.jpg",
         "alt": "Ellie-Rose Wilkens portrait"
       },
       {
@@ -30,7 +30,7 @@
         "tags": ["art", "fashion", "events"],
         "tagline": "Photographe freelance",
         "price": 500,
-        "portrait": "assets/img/Photographer_ID_Photos/TracyGalindo.jpg",
+        "portrait": "assets/img/Photographers_ID_Photos/TracyGalindo.jpg",
         "alt": "Tracy Galindo portrait"
       },
       {
@@ -41,7 +41,7 @@
         "tags": ["travel", "portrait"],
         "tagline": "Toujours aller de l'avant",
         "price": 350,
-        "portrait": "assets/img/Photographer_ID_Photos/NabeelBradford.jpg",
+        "portrait": "assets/img/Photographers_ID_Photos/NabeelBradford.jpg",
         "alt": "Nabeel Bradford portrait"
       },
       {
@@ -52,7 +52,7 @@
         "tags": ["sport", "fashion", "events", "animals"],
         "tagline": "Je crée des souvenirs",
         "price": 275,
-        "portrait": "assets/img/Photographer_ID_Photos/RhodeDubois.jpg",
+        "portrait": "assets/img/Photographers_ID_Photos/RhodeDubois.jpg",
         "alt": "Rhode Dubois portrait"
       },
       {
@@ -63,7 +63,7 @@
         "tags": ["travel", "architecture"],
         "tagline": "Toujours à la recherche de LA photo",
         "price": 300,
-        "portrait": "assets/img/Photographer_ID_Photos/MarcelNikolic.jpg",
+        "portrait": "assets/img/Photographers_ID_Photos/MarcelNikolic.jpg",
         "alt": "Marcel Nikolic portrait"
       }
     ],

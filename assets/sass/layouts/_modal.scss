@@ -23,6 +23,14 @@
         height: 140px;
     }
 }
+@media screen and (max-width: 860px) {
+    .modal{
+        width: 75%;
+        // &__title {
+            
+        // }
+    }    
+}
 .form {
     &__label {
         margin-bottom: 15px;

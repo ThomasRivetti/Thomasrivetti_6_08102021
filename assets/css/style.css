@@ -513,6 +513,11 @@ body {
   height: 140px;
 }
 
+@media screen and (max-width: 860px) {
+  .modal {
+    width: 75%;
+  }
+}
 .form__label {
   margin-bottom: 15px;
 }

@@ -74,20 +74,12 @@ messageInput.addEventListener("blur", function(){
     }
 })
 
-/*
-function validate(event) {
+sendModalBtn.addEventListener("click", function(event) {
   event.preventDefault()
-  if (regexFirstName.test(firstNameInput.value) == true &&
-      regexLastName.test(lastNameInput.value) == true &&
-      regexEmail.test(emailInput.value) == true &&
-      regexMessage.test(messageInput.value) == true) {
-      closeModal();
-      confirmationModal.style.display = "block";
-  } else {
-        firstNameError.innerText = regexFirstName.test(firstNameInput.value) == true ? "" : "Le Prénom doit faire 2 lettres minimum", firstNameError.style.fontSize = "1.8rem";
-        lastNameError.innerText = regexLastName.test(lastNameInput.value) == true ? "" : "Le nom doit faire 2 lettres minimum", lastNameError.style.fontSize = "1.8rem";
-        emailError.innerText = regexEmail.test(emailInput.value) == true ? "" : "L'adresse mail n'est pas valide", emailError.style.fontSize = "1.8rem";
-        messageError.innerText = regexMessage.test(messageInput.value) == true ? "" : "Le message doit faire entre 30 et 2000 caractères", messageError.style.fontSize = "1.8rem";       
-    }
-}
-*/
+  console.group('Contact modal');
+        console.log('Prénom : ' + firstNameInput.value);
+        console.log('Nom : ' + lastNameInput.value);
+        console.log('Email : ' + emailInput.value);
+        console.log('Message : ' + messageInput.value);
+        console.groupEnd();        
+})

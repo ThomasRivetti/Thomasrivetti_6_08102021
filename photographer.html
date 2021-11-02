@@ -154,15 +154,15 @@
                 </article> -->
             </div>
         </section>
-        <aside class="info">
+        <div class="info" aria-label="nombre de likes et prix">
             <div class="info__block">
-                <div class="info__likes">
-                    <p class="info__totalLikes">000</p>
+                <div class="info__likes" aria-live="polite" aria-atomic="true" aria-label="nombre de likes">
+                    <p id="photographerLikes" class="info__totalLikes"></p>
                     <i class="fas fa-heart"></i>
                 </div>
-                <p class="info__price"> 400€/jour</p>
+                <p id="photographerPrice" class="info__price"></p>
             </div>
-        </aside>
+        </div>
     </main>
     <div id="contactModal" class="modal" role="dialog">
         <main class="modal__content">
@@ -194,7 +194,7 @@
                     <input type="text" name="message" id="messageInput" class="form__input form__input--msg" min="30" max="500" placeholder="Votre message">
                     <span id="messageError" class="form__error"></span>
                 </div>
-                <button class="modal__btn" id="sendBtn">Envoyer</button>
+                <button id="sendBtn" class="modal__btn">Envoyer</button>
             </form>
         </main>
         

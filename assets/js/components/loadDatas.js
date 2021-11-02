@@ -20,9 +20,7 @@ fetch('../../../api/photographer.json')
     });
 
 function showPhotographerCard(jsonObj, id) {
-    console.log(jsonObj, id)
     const photographer = jsonObj.filter(person => person.id == id);
-    console.log(photographer)
     const sectionPhotographerCard = document.getElementById("photographerCard");
     const templatePhotographerCard = `
         <div class="photographer__info--phPage">
@@ -35,7 +33,11 @@ function showPhotographerCard(jsonObj, id) {
         </div>
         <button id="openModalBtn" class="open__modal modal__btn" onclick="launchModal();">Contactez-moi</button>
         <img src="${photographer[0].portrait}" alt="photographie du profit de Mimi Keel" class="photographer__portrait">`;
-    sectionPhotographerCard.innerHTML = templatePhotographerCard; 
+    sectionPhotographerCard.innerHTML = templatePhotographerCard;
+    
+    //mise à jour du prix des photographes
+    const photographerPrice = document.getElementById("photographerPrice");
+    photographerPrice.innerHTML = photographer[0].price + "€/Jour";
 }
 
 function showPhotographerMedias(jsonObj, id) {
@@ -44,6 +46,7 @@ function showPhotographerMedias(jsonObj, id) {
     console.log(medias);
     const sectionPhotographerMedias = document.getElementById("photographerMedias");
     let templatePhotographerMedias = ``;
+    let photographerTotalLikes = 0;
     medias.forEach(media => {
         templatePhotographerMedias += `
             <article class="work__block">
@@ -55,7 +58,13 @@ function showPhotographerMedias(jsonObj, id) {
                     <p class="work__likes">${media.likes}</p>
                     <i class="far fa-heart" aria-label="likes"></i>
                 </div>
-            </article>`        
+            </article>`
+        photographerTotalLikes += media.likes;        
     });
     sectionPhotographerMedias.innerHTML = templatePhotographerMedias;
+
+    //mise à jour du tatal des likes
+    const photographerLikes = document.getElementById("photographerLikes");
+    photographerLikes.innerHTML = photographerTotalLikes;
 }
+

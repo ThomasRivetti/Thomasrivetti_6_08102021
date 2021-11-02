@@ -29,7 +29,7 @@ html {
 @media screen and (max-width: 550px) {
     .header {
         &__title {
-            font-size: 14px;
+            font-size: $font-size-text;
         }
     }
     
@@ -37,9 +37,11 @@ html {
 .photographer {
     &__tag {        
         font-family: 'DMSans Medium', sans-serif;
+        font-size: $font-size-title;
         color: $primary-color;
         line-height: 16px;
         text-align: center;
+
     }
     &__name {
         font-size: $font-size-title*3;
@@ -49,6 +51,7 @@ html {
         }
         &--phPage {
             font-size: $font-size-text*4;
+            line-height: 1;
         }
     }
     &__place {        
@@ -68,8 +71,12 @@ html {
         color: lighten($color-dark, 46%);
     }  
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 860px) {
     .photographer {
+        &__tag {
+            font-size: $font-size-text;
+            line-height: 1.5;
+        }
         &__name--phPage {
             font-size: $font-size-title*3;
         }

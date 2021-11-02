@@ -94,11 +94,12 @@ html {
 
 @media screen and (max-width: 550px) {
   .header__title {
-    font-size: 14px;
+    font-size: 1.6rem;
   }
 }
 .photographer__tag {
   font-family: "DMSans Medium", sans-serif;
+  font-size: 1.2rem;
   color: #911d1d;
   line-height: 16px;
   text-align: center;
@@ -112,6 +113,7 @@ html {
 }
 .photographer__name--phPage {
   font-size: 6.4rem;
+  line-height: 1;
 }
 .photographer__place {
   color: #911d1d;
@@ -130,7 +132,11 @@ html {
   color: #757575;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 860px) {
+  .photographer__tag {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
   .photographer__name--phPage {
     font-size: 3.6rem;
   }
@@ -263,6 +269,12 @@ body {
   flex-direction: row;
   margin: 0 auto;
 }
+.header__logo {
+  width: 200px;
+}
+.header__logo img {
+  width: 100%;
+}
 .header__nav {
   margin: 0 auto;
   display: flex;
@@ -294,7 +306,6 @@ body {
   }
   .header__title {
     order: 2;
-    width: fit-content;
     margin-left: auto;
   }
   .header__taglist {
@@ -305,11 +316,20 @@ body {
   }
 }
 @media screen and (max-width: 860px) {
+  .header {
+    padding: 0 32px;
+  }
   .header__taglist {
     width: 100%;
   }
 }
 @media screen and (max-width: 550px) {
+  .header {
+    padding: 0 24px;
+  }
+  .header__logo {
+    width: 150px;
+  }
   .header__title {
     margin-left: auto;
   }
@@ -325,15 +345,14 @@ body {
   flex-wrap: wrap;
   margin: 60px auto 0;
 }
-.photographer__list > a {
-  width: 350px;
-}
 .photographer__info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 35px;
+  width: 350px;
+  margin: 25px;
 }
 .photographer__profile {
   display: flex;
@@ -383,13 +402,15 @@ body {
   margin: auto 0 16px;
 }
 .photographer__tag {
-  margin: 0 5px 0 0;
+  margin: 0 5px 5px;
 }
 
 @media screen and (max-width: 550px) {
-  .photographer__portrait {
+  .photographer__portrait--phPage {
     width: 100px;
     height: 100px;
+    position: absolute;
+    right: 5px;
   }
   .photographer__taglist {
     flex-wrap: wrap;

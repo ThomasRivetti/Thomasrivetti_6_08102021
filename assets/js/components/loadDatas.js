@@ -28,11 +28,11 @@ function showPhotographerCard(jsonObj, id) {
             <p class="photographer__place photographer__place--phPage">${photographer[0].city},${photographer[0].country}</p>
             <p class="photographer__quote photographer__quote--phPage">${photographer[0].tagline}</p>
             <ul class="photographer__taglist photographer__taglist--phpage">
-                ${photographer[0].tags.map(tag => `<li class="photographer__tag"><button aria-label="Triez les photographes sur le thème des portraits">#${tag}</button></li>` ).join(" ")}              
+                ${photographer[0].tags.map(tag => `<li class="photographer__tag"><a href="#" aria-label="Triez les photographes sur le thème des portraits">#${tag}</a></li>` ).join(" ")}              
             </ul>
         </div>
         <button id="openModalBtn" class="open__modal modal__btn" onclick="launchModal();">Contactez-moi</button>
-        <img src="${photographer[0].portrait}" alt="photographie du profit de Mimi Keel" class="photographer__portrait">`;
+        <img src="${photographer[0].portrait}" alt="photographie du profit de Mimi Keel" class="photographer__portrait photographer__portrait--phPage">`;
     sectionPhotographerCard.innerHTML = templatePhotographerCard;
     
     //mise à jour du prix des photographes

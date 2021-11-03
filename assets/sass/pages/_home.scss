@@ -21,11 +21,11 @@
     }
     &__nav {
         margin: 0 auto;
+        padding: 0 24px;
         display: flex;
-        // justify-content: space-between;
-        // flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        max-width: 1440px;      
+        width: 1340px;      
     }
     &__title {
         order: 3;
@@ -63,7 +63,13 @@
 }
 @media screen and (max-width: 860px) {
     .header {
-        padding: 0 32px;
+        padding: 0 24px;
+        &__logo {
+            width: 175px;
+        }
+        &__nav {
+            padding: 0;
+        }
         &__taglist {
             width: 100%;
         }
@@ -71,7 +77,6 @@
 }
 @media screen and (max-width: 550px) {
     .header {
-        padding: 0 24px;
         &__logo {
             width: 150px;
         }
@@ -100,10 +105,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 35px;
+        padding: 5px;
+        margin: 20px;
         width: 350px;
-        margin: 25px;
-        
     }
     &__profile {
         display: flex;
@@ -121,7 +125,6 @@
     }
     &__name {
         padding: 1.6rem 0;
-        // line-height: normal;
     }
     
     &__taglist {

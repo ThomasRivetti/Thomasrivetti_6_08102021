@@ -26,6 +26,13 @@ html {
         color: $primary-color;
     }
 }
+@media screen and (max-width: 860px) {
+    .header {
+        &__title {
+            font-size: $font-size-title*2;
+        }
+    }
+}
 @media screen and (max-width: 550px) {
     .header {
         &__title {

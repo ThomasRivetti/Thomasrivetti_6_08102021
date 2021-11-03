@@ -1,7 +1,7 @@
 //récupération des données JSON pour la page des photographes
 //todo liste des photographes à manipuler
 
-fetch('../../../api/photographer.json')
+fetch('../../api/photographer.json')
     .then(function(response) {
         if (response.ok) {
             return response.json();

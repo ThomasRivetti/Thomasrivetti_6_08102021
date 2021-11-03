@@ -9,7 +9,7 @@
     <title>FISHEYE Photographe</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <a href="index.html" class="header__logo">
             <img src="./assets/img/Logo/logo.svg" alt="Fisheye Home Page">
         </a>
@@ -169,31 +169,31 @@
             <header class="modal__header">
                 <h1 class="modal__title">
                     <span>Contactez-moi</span>
-                    <span id="modalPhotographerName">Mimi Keel</span>
+                    <span id="modalPhotographerName"></span>
                 </h1>
-                <img id="closeModal" class="modal__close"src="./assets/img/components/closeModal.svg"></img>
+                <img id="closeModal" class="modal__close"src="./assets/img/components/closeModal.svg" alt="bouton de fermeture de la modale"></img>
             </header>
             <form class="form">
-                <div class="form__field">
+                <fieldset class="form__field">
                     <label for="firstname" class="form__label">Prénom</label>
                     <input type="text" name="firstname" id="firstnameInput" class="form__input" placeholder="Prénom">
                     <span id="firstNameError" class="form__error"></span>
-                </div>
-                <div class="form__field">
+                </fieldset>
+                <fieldset class="form__field">
                     <label for="lastname" class="form__label">Nom</label>
                     <input type="text" name="lastname" id="lastnameInput" class="form__input" placeholder="Nom">
                     <span id="lastNameError" class="form__error"></span>
-                </div>
-                <div class="form__field">
+                </fieldset>
+                <fieldset class="form__field">
                     <label for="mail" class="form__label">Email</label>
                     <input type="email" name="email" id="emailInput" class="form__input" placeholder="exemple@email.com">
                     <span id="emailError"  class="form__error"></span>
-                </div>
-                <div class="form__field">
+                </fieldset>
+                <fieldset class="form__field">
                     <label for="message" class="form__label">Votre message</label>
-                    <input type="text" name="message" id="messageInput" class="form__input form__input--msg" min="30" max="500" placeholder="Votre message">
+                    <input type="text" name="message" id="messageInput" class="form__input form__input--msg" placeholder="Votre message">
                     <span id="messageError" class="form__error"></span>
-                </div>
+                </fieldset>
                 <button id="sendBtn" class="modal__btn">Envoyer</button>
             </form>
         </main>

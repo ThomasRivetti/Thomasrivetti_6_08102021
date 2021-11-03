@@ -185,6 +185,16 @@ html {
   font-family: "DMSans Bold", sans-serif;
 }
 
+@media screen and (max-width: 860px) {
+  .modal__title {
+    font-size: 4.8rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .modal__title {
+    font-size: 3.2rem;
+  }
+}
 .form {
   font-size: 3.6rem;
   font-family: "DMSans", sans-serif;
@@ -202,6 +212,25 @@ html {
   text-align: center;
 }
 
+@media screen and (max-width: 860px) {
+  .form {
+    font-size: 2.4rem;
+  }
+  .form__input::placeholder {
+    font-size: 1.8rem;
+  }
+  .form__error {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .form {
+    font-size: 1.8rem;
+  }
+  .form__input::placeholder {
+    font-size: 1.2rem;
+  }
+}
 .lightbox__mediaName {
   color: #911d1d;
   font-size: 3.2rem;
@@ -225,12 +254,15 @@ html {
   .modal__btn {
     width: 200px;
     height: 35px;
-    position: fixed;
-    bottom: 10%;
+    position: relative;
+    bottom: 5%;
     left: 0;
     right: 0;
     margin: 0 auto;
     transform: translateY(-10%);
+  }
+  .modal__btn--open {
+    position: fixed;
   }
 }
 .lightbox__btn {
@@ -302,7 +334,6 @@ body {
 @media screen and (max-width: 1211px) {
   .header {
     align-items: center;
-    justify-content: center;
     width: 100%;
   }
   .header__nav {
@@ -343,6 +374,10 @@ body {
   .header__title {
     margin-left: auto;
   }
+}
+.photographer > a:focus {
+  border: 3px double #911d1d;
+  border-radius: 15px;
 }
 .photographer__blocklist {
   max-width: 1340px;
@@ -541,12 +576,16 @@ body {
 .modal__title {
   display: flex;
   flex-direction: column;
-  height: 140px;
+  margin-bottom: 36px;
 }
 
 @media screen and (max-width: 860px) {
   .modal {
     width: 75%;
+    min-width: 360px;
+  }
+  .modal__title {
+    height: auto;
   }
 }
 .form__label {

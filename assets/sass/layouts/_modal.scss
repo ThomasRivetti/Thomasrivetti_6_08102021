@@ -16,19 +16,19 @@
         width: 30px;
         height: 30px;
     }
-
     &__title {
         display: flex;
         flex-direction: column;
-        height: 140px;
+        margin-bottom: 36px;
     }
 }
 @media screen and (max-width: 860px) {
     .modal{
         width: 75%;
-        // &__title {
-            
-        // }
+        min-width: 360px;
+        &__title {
+            height: auto;
+        }
     }    
 }
 .form {
@@ -50,7 +50,6 @@
     &__error {
         color: $color-dark;
         padding: 5px 0 10px;
-
     } 
 }
 

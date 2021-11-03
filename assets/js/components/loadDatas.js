@@ -31,13 +31,16 @@ function showPhotographerCard(jsonObj, id) {
                 ${photographer[0].tags.map(tag => `<li class="photographer__tag"><a href="#" aria-label="Triez les photographes sur le thème des portraits">#${tag}</a></li>` ).join(" ")}              
             </ul>
         </div>
-        <button id="openModalBtn" class="open__modal modal__btn" onclick="launchModal();">Contactez-moi</button>
+        <button id="openModalBtn" class="modal__btn modal__btn--open" onclick="launchModal();">Contactez-moi</button>
         <img src="${photographer[0].portrait}" alt="photographie du profit de Mimi Keel" class="photographer__portrait photographer__portrait--phPage">`;
     sectionPhotographerCard.innerHTML = templatePhotographerCard;
     
     //mise à jour du prix des photographes
     const photographerPrice = document.getElementById("photographerPrice");
     photographerPrice.innerHTML = photographer[0].price + "€/Jour";
+
+    const modalPhotographerName = document.getElementById("modalPhotographerName");
+    modalPhotographerName.innerHTML = photographer[0].name;
 }
 
 function showPhotographerMedias(jsonObj, id) {

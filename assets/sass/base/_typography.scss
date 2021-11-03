@@ -131,13 +131,27 @@ html {
         font-family: 'DMSans Bold', sans-serif;
     }
 }
+@media screen and (max-width:860px) {
+    .modal {
+        &__title {
+            font-size: $font-size-text*3;
+        }
+    }   
+}
+@media screen and (max-width:860px) {
+    .modal {
+        &__title {
+            font-size: $font-size-text*2;
+        }
+    }   
+}
+
 .form {
     font-size: $font-size-title*3;
     font-family: 'DMSans', sans-serif;
     &__input {
         font-size: $font-size-text*1.5;
         font-family: 'DMSans Medium', sans-serif;
-        
     }
     &__input::placeholder {
         font-size: $font-size-title*2;
@@ -147,6 +161,25 @@ html {
         font-family:'DMSans Medium', sans-serif;
         text-align: center;
     }
+}
+@media screen and (max-width:860px) {
+    .form {
+        font-size: $font-size-title*2;
+        &__input::placeholder {
+            font-size: $font-size-title*1.5;
+        }
+        &__error {
+            font-size: $font-size-title*1.5;
+        }
+    }   
+}
+@media screen and (max-width:550px) {
+    .form {
+        font-size: $font-size-title*1.5;
+        &__input::placeholder {
+            font-size: $font-size-title;
+        }
+    }   
 }
 .lightbox {
     &__mediaName {

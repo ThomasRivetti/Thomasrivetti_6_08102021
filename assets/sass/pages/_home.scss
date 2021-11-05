@@ -7,6 +7,10 @@
        justify-content: center;
        width: 20rem;
        margin: 5px auto 0 auto;
+       &:focus {
+        background-color: $primary-color;
+        color: white;
+       }
     }
 }
 .header {
@@ -123,7 +127,10 @@
         border-radius: 50%;
         width: 200px;
         height: 200px;
-        object-fit: cover;        
+        object-fit: cover;
+        &:hover {
+            box-shadow: 0 0 1rem $secondary-color;
+        }        
     }
     &__name {
         padding: 1.6rem 0;
@@ -138,10 +145,8 @@
         border-radius: 11px;
         padding: 0px 8px;
         margin: 0 5px 5px ;
-        transition: all .3s;
-        :hover {
-            border-radius: 11px;
-            padding: 0px 8px;
+        transition: ease-in-out .3s;
+        &:hover {
             background-color: $primary-color;
             color: white;
         }

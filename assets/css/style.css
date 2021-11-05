@@ -250,6 +250,10 @@ body {
   width: 20rem;
   margin: 5px auto 0 auto;
 }
+.hidden__link:focus {
+  background-color: #911d1d;
+  color: white;
+}
 
 .header {
   display: flex;
@@ -363,6 +367,9 @@ body {
   height: 200px;
   object-fit: cover;
 }
+.photographer__portrait:hover {
+  box-shadow: 0 0 1rem #db8876;
+}
 .photographer__name {
   padding: 1.6rem 0;
 }
@@ -375,11 +382,9 @@ body {
   border-radius: 11px;
   padding: 0px 8px;
   margin: 0 5px 5px;
-  transition: all 0.3s;
+  transition: ease-in-out 0.3s;
 }
-.photographer__tag :hover {
-  border-radius: 11px;
-  padding: 0px 8px;
+.photographer__tag:hover {
   background-color: #911d1d;
   color: white;
 }
@@ -518,6 +523,15 @@ body {
   height: 69px;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.modal__btn--open:hover {
+  background-color: #db8876;
+  color: black;
+}
+.modal__btn--active:active {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 860px) {

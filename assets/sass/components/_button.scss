@@ -10,6 +10,15 @@
         height: 69px;
         border-radius: 5px;
         border: none;
+        cursor: pointer;
+        transition: ease-in-out .3s;
+        &--open:hover {
+            background-color: $secondary-color;
+            color: $color-dark;
+        }
+        &--active:active {
+            transform: scale(1.1);
+        }
     }
 }
 @media screen and (max-width: 860px) {
@@ -26,10 +35,8 @@
             &--open {
                 position: fixed;
             }      
-        }
-        
+        }    
     }
-    
 }
 
 .lightbox {

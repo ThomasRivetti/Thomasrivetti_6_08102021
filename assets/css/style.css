@@ -237,56 +237,6 @@ html {
   text-align: center;
 }
 
-.modal__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  background-color: #911d1d;
-  color: white;
-  width: 170px;
-  height: 69px;
-  border-radius: 5px;
-  border: none;
-}
-
-@media screen and (max-width: 860px) {
-  .modal__btn {
-    width: 200px;
-    height: 35px;
-    position: relative;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transform: translateY(-10%);
-  }
-  .modal__btn--open {
-    position: fixed;
-  }
-}
-.lightbox__btn {
-  background-color: transparent;
-  border: transparent;
-  color: #911d1d;
-  font-size: 4.8rem;
-}
-.lightbox__btn--close {
-  position: absolute;
-  right: -3rem;
-  top: 0.5rem;
-}
-.lightbox__btn--left {
-  left: -3rem;
-  position: absolute;
-  top: 48%;
-}
-.lightbox__btn--right {
-  position: absolute;
-  right: -3rem;
-  top: 48%;
-}
-
 body {
   max-width: 1440px;
   margin: 8px auto;
@@ -375,7 +325,7 @@ body {
     margin-left: auto;
   }
 }
-.photographer > a:focus {
+.photographer a:focus {
   border: 3px double #911d1d;
   border-radius: 15px;
 }
@@ -424,7 +374,14 @@ body {
   border: 0.5px solid #cacaca;
   border-radius: 11px;
   padding: 0px 8px;
-  margin: 0 5px;
+  margin: 0 5px 5px;
+  transition: all 0.3s;
+}
+.photographer__tag :hover {
+  border-radius: 11px;
+  padding: 0px 8px;
+  background-color: #911d1d;
+  color: white;
 }
 .photographer__tag:last-child {
   margin-right: 0;
@@ -445,9 +402,6 @@ body {
 .photographer__quote--phPage {
   width: auto;
   margin: auto 0 16px;
-}
-.photographer__tag {
-  margin: 0 5px 5px;
 }
 
 @media screen and (max-width: 550px) {
@@ -553,6 +507,56 @@ body {
     position: static;
   }
 }
+.modal__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  background-color: #911d1d;
+  color: white;
+  width: 170px;
+  height: 69px;
+  border-radius: 5px;
+  border: none;
+}
+
+@media screen and (max-width: 860px) {
+  .modal__btn {
+    width: 200px;
+    height: 35px;
+    position: relative;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-10%);
+  }
+  .modal__btn--open {
+    position: fixed;
+  }
+}
+.lightbox__btn {
+  background-color: transparent;
+  border: transparent;
+  color: #911d1d;
+  font-size: 4.8rem;
+}
+.lightbox__btn--close {
+  position: absolute;
+  right: -3rem;
+  top: 0.5rem;
+}
+.lightbox__btn--left {
+  left: -3rem;
+  position: absolute;
+  top: 48%;
+}
+.lightbox__btn--right {
+  position: absolute;
+  right: -3rem;
+  top: 48%;
+}
+
 .modal {
   display: none;
   width: 670px;

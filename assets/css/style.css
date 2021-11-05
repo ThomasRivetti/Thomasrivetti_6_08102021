@@ -651,6 +651,7 @@ input[data-error]::after {
   width: 100%;
 }
 .lightbox__body {
+  display: block;
   position: fixed;
   top: 3%;
   left: 50%;

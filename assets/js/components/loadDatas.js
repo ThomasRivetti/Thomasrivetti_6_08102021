@@ -55,7 +55,7 @@ function showPhotographerMedias(jsonObj, id) {
     medias.forEach(media => {
         templatePhotographerMedias += `
             <article class="work__block">
-                <a href="#" role="button" title="${media.alt}, s'ouvre dans l'album">
+                <a class="openLightboxModal" href="#" role="button" title="${media.alt}, s'ouvre dans l'album">
                     ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" class="work__img"/>` : `<video controls muted class="work__video"><source src="${media.video}" type="video/mp4"></video>` }
                 </a>
                 <div class="work__legend">
@@ -73,3 +73,47 @@ function showPhotographerMedias(jsonObj, id) {
     photographerLikes.innerHTML = photographerTotalLikes;
 }
 
+//lightbox
+const lightboxModal = document.getElementById("lightboxModal");
+const lightboxOpen = document.querySelector("openLightboxModal");
+
+// Open lightbox
+lightboxOpen.addEventListener("click", openLightbox);
+function openLightbox() {
+    lightboxModal.style.display = "block";
+}
+
+
+// Close the Modal
+
+
+// var slideIndex = 1;
+// showSlides(slideIndex);
+
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   var captionText = document.getElementById("caption");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+//   captionText.innerHTML = dots[slideIndex-1].alt;
+// }

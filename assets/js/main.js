@@ -14,8 +14,6 @@ const lastNameInput = document.getElementById("lastnameInput"); //input nom
 const emailInput = document.getElementById("emailInput"); //input mail
 const messageInput = document.getElementById("messageInput"); //input message
 
-//open modal
-// modalBtn.addEventListener("click", launchModal);
 function launchModal() {
   contactModal.style.display = "block";
 }

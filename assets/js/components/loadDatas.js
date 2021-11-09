@@ -1,7 +1,7 @@
 //récupération des données JSON pour la page des photographes
 //todo liste des photographes à manipuler
 
-fetch('../../../api/photographer.json')
+fetch('../../api/photographer.json')
     .then(function(response) {
         if (response.ok) {
             return response.json();
@@ -55,8 +55,8 @@ function showPhotographerMedias(jsonObj, id) {
     medias.forEach(media => {
         templatePhotographerMedias += `
             <article class="work__block">
-                <a class="openLightboxModal" href="#" role="button" title="${media.alt}, s'ouvre dans l'album">
-                    ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" class="work__img"/>` : `<video controls muted class="work__video"><source src="${media.video}" type="video/mp4"></video>` }
+                <a href="#" role="button" title="${media.alt}, s'ouvre dans l'album">
+                    ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" role="button" class="work__img"/>` : `<video controls muted class="work__video"><source src="${media.video}" type="video/mp4"></video>` }
                 </a>
                 <div class="work__legend">
                     <h2 class="work__name">${media.title}</h2>
@@ -72,17 +72,17 @@ function showPhotographerMedias(jsonObj, id) {
     const photographerLikes = document.getElementById("photographerLikes");
     photographerLikes.innerHTML = photographerTotalLikes;
 }
-
+/*
 //lightbox
 const lightboxModal = document.getElementById("lightboxModal");
-const lightboxOpen = document.querySelector("openLightboxModal");
+const lightboxOpen = document.querySelectorAll("openLightboxModal");
 
 // Open lightbox
 lightboxOpen.addEventListener("click", openLightbox);
 function openLightbox() {
     lightboxModal.style.display = "block";
 }
-
+*/
 
 // Close the Modal
 

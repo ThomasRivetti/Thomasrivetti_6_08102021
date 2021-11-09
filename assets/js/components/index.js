@@ -1,4 +1,4 @@
-fetch('../../api/photographer.json')
+fetch('../../../api/photographer.json')
     .then(function(response) {
         if (response.ok) {
             return response.json();

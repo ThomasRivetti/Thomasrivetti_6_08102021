@@ -1,7 +1,7 @@
 //récupération des données JSON pour la page des photographes
 //todo liste des photographes à manipuler
 
-fetch('https://thomasrivetti.github.io/Thomasrivetti_6_08102021/api/photographer.json')
+fetch('../../api/photographer.json')
     .then(function(response) {
         if (response.ok) {
             return response.json();
@@ -25,7 +25,7 @@ function showPhotographerCard(jsonObj, id) {
     const templatePhotographerCard = `
         <div class="photographer__info--phPage">
             <h1 class="photographer__name photographer__name--phPage">${photographer[0].name}</h1>
-            <p class="photographer__place photographer__place--phPage">${photographer[0].city},${photographer[0].country}</p>
+            <p class="photographer__place photographer__place--phPage">${photographer[0].city}, ${photographer[0].country}</p>
             <p class="photographer__quote photographer__quote--phPage">${photographer[0].tagline}</p>
             <ul class="photographer__taglist photographer__taglist--phpage">
                 ${photographer[0].tags.map(tag => `<li class="photographer__tag"><a href="#" aria-label="Triez les photographes sur le thème des portraits">#${tag}</a></li>` ).join(" ")}              

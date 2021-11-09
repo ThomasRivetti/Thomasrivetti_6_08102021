@@ -1,4 +1,4 @@
-fetch('../../api/photographer.json')
+fetch('https://thomasrivetti.github.io/Thomasrivetti_6_08102021/api/photographer.json')
     .then(function(response) {
         if (response.ok) {
             return response.json();

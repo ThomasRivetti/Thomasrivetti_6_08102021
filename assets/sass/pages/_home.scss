@@ -3,11 +3,15 @@
     &__link {
        background-color: $secondary-color;
        border-radius: 5px;
-       display: flex;
+       display: none;
        justify-content: center;
        width: 20rem;
        margin: 5px auto 0 auto;
-       &:focus {
+       position: fixed;
+       top: 1rem;
+       left: 50%;
+       transform: translateX(-50%);
+       &:focus, &:hover {
         background-color: $primary-color;
         color: white;
        }
@@ -140,18 +144,19 @@
         display: flex;
         flex-direction: row;
     }
-    &__tag {
+    &__tag a {
         border: 0.5px solid #cacaca;
         border-radius: 11px;
         padding: 0px 8px;
         margin: 0 5px 5px ;
         transition: ease-in-out .3s;
-        &:hover {
+        &:hover, &.is-active {
             background-color: $primary-color;
             color: white;
         }
+        
     }
-    &__tag:last-child {
+    &__tag a:last-child {
         margin-right: 0;
     }
 }

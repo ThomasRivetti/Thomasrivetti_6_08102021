@@ -2,7 +2,7 @@
 const regexFirstName = /^[A-zÀ-ú]+[A-zÀ-ú-]?[A-zÀ-ú]+$/;
 const regexLastName = /^[A-zÀ-ú]+[A-zÀ-ú-]?[A-zÀ-ú]+$/;
 const regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
-const regexMessage = /^[a-zA-Z0-9!@#$%^&*()\[\]{};'’`\-\\:,.\/<>?| ]{30,500}$/
+const regexMessage = /^[A-zÀ-ú0-9!@#$%^&*()\[\]{};'’`\-\\:,.\/<>?| ]{30,500}$/
 
 //DOM
 const contactModal = document.getElementById("contactModal"); //modal
@@ -64,7 +64,7 @@ emailInput.addEventListener("blur", function(){
 messageInput.addEventListener("blur", function(){
   const messageError = document.getElementById("messageError");
   if(regexMessage.test(messageInput.value) == false) {
-    messageError.innerText = "Le message doit faire entre 30 et 2000 caractères";
+    messageError.innerText = "Le message doit faire entre 30 et 500 caractères";
     messageInput.parentElement.dataset.errorVisible = "true";
   } else {
       messageError.innerText = "";

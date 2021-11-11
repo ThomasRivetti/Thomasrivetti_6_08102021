@@ -1,3 +1,22 @@
+.work {
+    &__likeBtn {
+        padding: 0;
+        margin: 0;
+        background: none;
+        cursor: pointer;
+        border: 0;
+        color: inherit;
+        font-size: inherit;
+        &.is-pressed > i {
+            color: $primary-color;
+            font-weight: bold;
+        }
+        & > i {
+            pointer-events: none;
+        }
+    }
+}
+
 .modal {
     &__btn {
         display: flex;

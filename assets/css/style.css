@@ -245,12 +245,16 @@ body {
 .hidden__link {
   background-color: #db8876;
   border-radius: 5px;
-  display: flex;
+  display: none;
   justify-content: center;
   width: 20rem;
   margin: 5px auto 0 auto;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.hidden__link:focus {
+.hidden__link:focus, .hidden__link:hover {
   background-color: #911d1d;
   color: white;
 }
@@ -377,18 +381,18 @@ body {
   display: flex;
   flex-direction: row;
 }
-.photographer__tag {
+.photographer__tag a {
   border: 0.5px solid #cacaca;
   border-radius: 11px;
   padding: 0px 8px;
   margin: 0 5px 5px;
   transition: ease-in-out 0.3s;
 }
-.photographer__tag:hover {
+.photographer__tag a:hover, .photographer__tag a.is-active {
   background-color: #911d1d;
   color: white;
 }
-.photographer__tag:last-child {
+.photographer__tag a:last-child {
   margin-right: 0;
 }
 
@@ -515,6 +519,23 @@ body {
     position: static;
   }
 }
+.work__likeBtn {
+  padding: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+}
+.work__likeBtn.is-pressed > i {
+  color: #911d1d;
+  font-weight: bold;
+}
+.work__likeBtn > i {
+  pointer-events: none;
+}
+
 .modal__btn {
   display: flex;
   justify-content: center;

@@ -47,6 +47,9 @@
         width: 350px;
         border-radius: 5px;
     }
+    &__imgcontainer {
+        cursor: pointer;
+    }
     &__img {
         width: 100%;
         height: 300px;

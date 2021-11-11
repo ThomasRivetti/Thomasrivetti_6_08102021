@@ -49,17 +49,17 @@
 
     &__btn--close {
         position: absolute;
-        right: -3rem;
-        top: .5rem;
+        right: 1rem;
+        top: 0.5rem;
     }
     &__btn--left {
-        left: -3rem;
+        left: 0;
         position: absolute;
         top: 48%;
     }
     &__btn--right {
         position: absolute;
-        right: -3rem;
+        right: 0;
         top: 48%;   
     }
 }

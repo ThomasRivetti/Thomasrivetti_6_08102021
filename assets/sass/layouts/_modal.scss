@@ -22,15 +22,7 @@
         margin-bottom: 36px;
     }
 }
-@media screen and (max-width: 860px) {
-    .modal{
-        width: 75%;
-        min-width: 360px;
-        &__title {
-            height: auto;
-        }
-    }    
-}
+
 .form {
     &__label {
         margin-bottom: 15px;
@@ -67,4 +59,21 @@ background-color: lightgrey;
 .form__field[data-error-visible="false"] .form__input {
 border: 5px solid green;
 padding-left: 10px;
+}
+@media screen and (max-width: 860px) {
+    .modal{
+        width: 75%;
+        min-width: 360px;
+        &__title {
+            height: auto;
+        }
+    }
+    .form{
+        &__input {
+            height: 40px;
+            &--msg {
+                height: 90px;
+            }
+        }
+    }    
 }

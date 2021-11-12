@@ -72,13 +72,13 @@
         top: 0.5rem;
     }
     &__btn--left {
-        left: 0;
+        left: -10%;
         position: absolute;
         top: 48%;
     }
     &__btn--right {
         position: absolute;
-        right: 0;
+        right: -10%;
         top: 48%;   
     }
 }

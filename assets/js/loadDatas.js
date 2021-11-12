@@ -99,7 +99,7 @@ const closeLightboxBtn = document.getElementById("closeLightbox");
 
 // Open lightbox
 function openLightbox() {
-    lightboxModal.style.display = "block";
+    lightboxModal.style.display = "flex";
 }
 // Close lightbox au clic
 closeLightboxBtn.addEventListener("click", closeLightbox);
@@ -115,7 +115,7 @@ function createLightboxItems(jsonObj, id) {
     medias.forEach(media => {
         templateMediabox += `
         <div class="lightbox__innerContainer">
-            ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" role="button" class="lightbox__media">` : `<video controls muted " class="work__video"><source src="${media.video}" type="video/mp4"></video>` }
+            ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" role="button" class="lightbox__media">` : `<video controls muted " class="work__video lightbox__media"><source src="${media.video}" type="video/mp4"></video>` }
             <span class="lightbox__mediaName">${media.title}</span>
         </div>        
             `
@@ -144,5 +144,5 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "flex";
 }

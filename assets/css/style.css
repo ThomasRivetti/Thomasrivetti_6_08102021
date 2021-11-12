@@ -585,13 +585,13 @@ body {
   top: 0.5rem;
 }
 .lightbox__btn--left {
-  left: 0;
+  left: -10%;
   position: absolute;
   top: 48%;
 }
 .lightbox__btn--right {
   position: absolute;
-  right: 0;
+  right: -10%;
   top: 48%;
 }
 
@@ -695,17 +695,26 @@ input[data-error]::after {
   transform: translate(-50%, 0);
   width: 60%;
 }
-.lightbox__mediaBox {
+.lightbox__outerContainer {
   background-color: rgba(255, 255, 255, 0);
-  height: 90%;
+  height: 100%;
   overflow: hidden;
   width: 90%;
   margin: 0 auto;
 }
-.lightbox__media {
+.lightbox__innerContainer {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
   height: 100%;
+}
+.lightbox__media {
+  height: 90%;
   object-fit: contain;
   width: 100%;
+}
+.lightbox__mediaName {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

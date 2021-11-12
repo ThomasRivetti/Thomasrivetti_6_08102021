@@ -288,6 +288,13 @@ body {
   padding: 0 10px;
   margin: 0 auto;
 }
+.header__tag a {
+  transition: ease-in-out 0.3s;
+}
+.header__tag a:hover, .header__tag a.is-active {
+  background-color: #911d1d;
+  color: white;
+}
 
 @media screen and (max-width: 1211px) {
   .header {
@@ -386,11 +393,7 @@ body {
   border-radius: 11px;
   padding: 0px 8px;
   margin: 0 5px 5px;
-  transition: ease-in-out 0.3s;
-}
-.photographer__tag a:hover, .photographer__tag a.is-active {
-  background-color: #911d1d;
-  color: white;
+  cursor: default;
 }
 .photographer__tag a:last-child {
   margin-right: 0;

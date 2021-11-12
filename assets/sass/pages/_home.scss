@@ -45,6 +45,13 @@
         padding: 0 10px;
         margin: 0 auto;
     }
+    &__tag a {
+        transition: ease-in-out .3s;
+        &:hover, &.is-active {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
 }
 @media screen and (max-width: 1211px) {
     .header {
@@ -148,13 +155,8 @@
         border: 0.5px solid #cacaca;
         border-radius: 11px;
         padding: 0px 8px;
-        margin: 0 5px 5px ;
-        transition: ease-in-out .3s;
-        &:hover, &.is-active {
-            background-color: $primary-color;
-            color: white;
-        }
-        
+        margin: 0 5px 5px;
+        cursor: default;     
     }
     &__tag a:last-child {
         margin-right: 0;

@@ -44,3 +44,14 @@
         margin-top: 2rem;
     }
 }
+@media screen and(max-width:860px) {
+    .lightbox {
+        &__innerContainer {
+            justify-content: space-around;
+        }
+        &__media {
+            height: 60%;
+        }
+    }
+    
+}

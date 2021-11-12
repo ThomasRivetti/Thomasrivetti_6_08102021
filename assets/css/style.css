@@ -717,4 +717,13 @@ input[data-error]::after {
   margin-top: 2rem;
 }
 
+@media screen and (max-width: 860px) {
+  .lightbox__innerContainer {
+    justify-content: space-around;
+  }
+  .lightbox__media {
+    height: 60%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

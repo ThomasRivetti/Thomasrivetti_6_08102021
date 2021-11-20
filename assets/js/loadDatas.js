@@ -44,6 +44,15 @@ function showPhotographerCard(jsonObj, id) {
     const modalPhotographerName = document.getElementById("modalPhotographerName");
     modalPhotographerName.innerHTML = photographer[0].name;
 }
+class MediaFactory {
+    static generateTag(media, idx) {
+        if (media.video === undefined) {  // c'est une image
+        return `<img src="${media.image}" alt="${media.alt}" onclick="openLightbox();currentSlide(${idx+1})" class="work__img"/>`
+        } else { // c'est une video
+        return `<video controls muted onclick="openLightbox();currentSlide(${idx+1})" class="work__video"><source src="${media.video}" type="video/mp4"></video>`
+        }
+    }
+}
 
 function showPhotographerMedias(jsonObj, id) {    
     const medias = jsonObj.filter(media => media.photographerId == id);
@@ -54,7 +63,7 @@ function showPhotographerMedias(jsonObj, id) {
         templatePhotographerMedias += `
             <article class="work__block">
                 <a href="#" class="work__imgcontainer" title="${media.alt}, s'ouvre dans l'album">
-                    ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" onclick="openLightbox();currentSlide(${i+1})" class="work__img"/>` : `<video controls muted onclick="openLightbox();currentSlide(${i+1})" class="work__video"><source src="${media.video}" type="video/mp4"></video>` }
+                ${MediaFactory.generateTag(media, i)}
                 </a>
                 <div class="work__legend">
                     <h2 class="work__name">${media.title}</h2>

@@ -2,7 +2,7 @@
 const regexFirstName = /^[A-zÀ-ú]+[A-zÀ-ú-]?[A-zÀ-ú]+$/;
 const regexLastName = /^[A-zÀ-ú]+[A-zÀ-ú-]?[A-zÀ-ú]+$/;
 const regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
-const regexMessage = /^[A-zÀ-ú0-9!@#$%^&*()\[\]{};'’`\-\\:,.\/<>?| ]{30,500}$/
+const regexMessage = /^[A-zÀ-ú0-9!@#$%^&*()\[\]{};'’`\-\\:,.\/<>?| ]{30,500}$/;
 
 //DOM
 const contactModal = document.getElementById("contactModal"); //modal
@@ -81,3 +81,62 @@ sendModalBtn.addEventListener("click", function(event) {
         console.log('Message : ' + messageInput.value);
         console.groupEnd();        
 })
+
+const dropdown = document.getElementById('dropdownMenu');
+dropdown.addEventListener('change', function(e) {
+    const value = dropdown.value;
+    fetch('../../api/photographer.json')
+        .then(response => response.json())
+        .then(data => {
+            const searchParams = new URLSearchParams(window.location.search);
+            const photographerId = searchParams.get("id");
+            const photographerMedia = data.media.filter(data => data.photographerId == photographerId);
+            filterMedia(photographerMedia, value)
+        }).catch(error => console.error(error))
+});
+
+//donné par Ibrahima
+
+function filterMedia(medias, type) {
+    let sortedMedias;
+    if (type == "popularity") {
+        sortedMedias = medias.sort((a, b) => b.likes - a.likes)
+    } else if (type == "date") {
+        sortedMedias = medias.sort(function(a, b) {
+          return new Date (b.date) - new Date (a.date)
+        })
+    } else if (type == "title") {
+        sortedMedias = medias.sort(function(a, b) {
+          if (a.title < b.title) {
+            return -1;
+          } else {
+            return 1;
+          }
+      });
+    }
+    console.log(sortedMedias);
+
+    const sectionPhotographerMedias = document.getElementById("photographerMedias");
+    let templatePhotographerMedias = ``;
+    let photographerTotalLikes = 0;
+    sortedMedias.forEach((media, i) => {
+                templatePhotographerMedias += `
+            <article class="work__block">
+                <a href="#" class="work__imgcontainer" title="${media.alt}, s'ouvre dans l'album">
+                    ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" onclick="openLightbox();currentSlide(${i+1})" class="work__img"/>` : `<video controls muted onclick="openLightbox();currentSlide(${i+1})" class="work__video"><source src="${media.video}" type="video/mp4"></video>` }
+                </a>
+                <div class="work__legend">
+                    <h2 class="work__name">${media.title}</h2>
+                    <p class="work__likes">${media.likes}</p>
+                    <button role="button" aria-pressed="false" onclick="addLike(event);" class="work__likeBtn" aria-label="liker"><i class="far fa-heart"></i></button>
+                </div>
+            </article>`
+        photographerTotalLikes += media.likes;
+
+    });
+    sectionPhotographerMedias.innerHTML = templatePhotographerMedias;
+
+    //mise à jour du tatal des likes
+    const photographerLikes = document.getElementById("photographerLikes");
+    photographerLikes.innerHTML = photographerTotalLikes;
+}

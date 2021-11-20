@@ -95,8 +95,6 @@ dropdown.addEventListener('change', function(e) {
         }).catch(error => console.error(error))
 });
 
-//donné par Ibrahima
-
 function filterMedia(medias, type) {
     let sortedMedias;
     if (type == "popularity") {
@@ -114,8 +112,7 @@ function filterMedia(medias, type) {
           }
       });
     }
-    console.log(sortedMedias);
-
+    
     const sectionPhotographerMedias = document.getElementById("photographerMedias");
     let templatePhotographerMedias = ``;
     let photographerTotalLikes = 0;

@@ -34,7 +34,7 @@ function showPhotographers(photographers) {
     for (const photographer of photographers) {
         photographersBlock.innerHTML += `
         <article class="photographer__info">
-            <a href="photographer.html?id=${photographer.id}">
+            <a href="photographer.html?id=${photographer.id}" tabindex="2">
                 <div class="photographer__profile">
                     <img src="${photographer.portrait}" alt="${photographer.alt}" class="photographer__portrait">
                     <h2 class="photographer__name photographer__name--home">${photographer.name}</h2>
@@ -44,7 +44,7 @@ function showPhotographers(photographers) {
             <p class="photographer__quote photographer__quote--home">${photographer.tagline}</p>
             <p class="photographer__price">${photographer.price}€/jour</p>
             <ul class="photographer__taglist">
-            ${photographer.tags.map(tag => `<li class="photographer__tag"><a href="#" onclick="filterByTag(event, '${tag}');" aria-label="Triez les photographes sur le thème des portraits">#${tag}</a></li>` ).join(" ")}
+            ${photographer.tags.map(tag => `<li class="photographer__tag"><a href="#" onclick="filterByTag(event, '${tag}');" aria-label="Triez les photographes sur le thème des portraits" tabindex="4"   >#${tag}</a></li>` ).join(" ")}
             </ul>
         </article>`
     }

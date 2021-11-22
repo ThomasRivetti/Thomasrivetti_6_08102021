@@ -28,10 +28,10 @@ function showPhotographerCard(jsonObj, id) {
             <p class="photographer__place photographer__place--phPage">${photographer[0].city}, ${photographer[0].country}</p>
             <p class="photographer__quote photographer__quote--phPage">${photographer[0].tagline}</p>
             <ul class="photographer__taglist photographer__taglist--phpage">
-                ${photographer[0].tags.map(tag => `<li class="photographer__tag"><a href="#" aria-label="Triez les photographes sur le thème des portraits">#${tag}</a></li>` ).join(" ")}              
+                ${photographer[0].tags.map(tag => `<li class="photographer__tag photographer__tag--phPage">#${tag}</li>` ).join(" ")}              
             </ul>
         </div>
-        <button id="openModalBtn" class="modal__btn modal__btn--open" onclick="launchModal();">Contactez-moi</button>
+        <button id="openModalBtn" class="modal__btn modal__btn--open" onclick="launchModal();" tabindex="2">Contactez-moi</button>
         <img src="${photographer[0].portrait}" alt="photographie du profit de Mimi Keel" class="photographer__portrait photographer__portrait--phPage">`;
     sectionPhotographerCard.innerHTML = templatePhotographerCard;
     
@@ -47,9 +47,9 @@ function showPhotographerCard(jsonObj, id) {
 class MediaFactory {
     static generateTag(media, idx) {
         if (media.video === undefined) {  // c'est une image
-        return `<img src="${media.image}" alt="${media.alt}" onclick="openLightbox();currentSlide(${idx+1})" class="work__img"/>`
+        return `<img src="${media.image}" alt="${media.alt}" onclick="openLightbox();currentSlide(${idx+1})" class="work__img  openLightboxModal"/>`
         } else { // c'est une video
-        return `<video controls muted onclick="openLightbox();currentSlide(${idx+1})" class="work__video"><source src="${media.video}" type="video/mp4"></video>`
+        return `<video controls muted onclick="openLightbox();currentSlide(${idx+1})" class="work__video openLightboxModal"><source src="${media.video}" type="video/mp4"></video>`
         }
     }
 }
@@ -62,13 +62,13 @@ function showPhotographerMedias(jsonObj, id) {
     medias.forEach((media, i) => {
         templatePhotographerMedias += `
             <article class="work__block">
-                <a href="#" class="work__imgcontainer" title="${media.alt}, s'ouvre dans l'album">
+                <a href="#" class="work__imgcontainer" onclick="openLightbox()" tabindex="4" title="${media.alt}, s'ouvre dans l'album">
                 ${MediaFactory.generateTag(media, i)}
                 </a>
                 <div class="work__legend">
                     <h2 class="work__name">${media.title}</h2>
                     <p class="work__likes">${media.likes}</p>
-                    <button role="button" aria-pressed="false" onclick="addLike(event);" class="work__likeBtn" aria-label="liker"><i class="far fa-heart"></i></button>
+                    <button role="button" tabindex="4" aria-pressed="false" onclick="addLike(event);" class="work__likeBtn" aria-label="liker"><i class="far fa-heart"></i></button>
                 </div>
             </article>`
         photographerTotalLikes += media.likes; 
@@ -107,13 +107,26 @@ const lightboxOpen = document.querySelectorAll("openLightboxModal");
 const closeLightboxBtn = document.getElementById("closeLightbox");
 
 // Open lightbox
+    //pression sur "ENTREE"
+lightboxOpen.onkeydown = function(e) {
+    if(e.keycode === 13) {
+        openLightbox()
+    }
+}
+
 function openLightbox() {
     lightboxModal.style.display = "flex";
+    lightboxModal.setAttribute("aria-hidden", "false");
 }
+
+//closeLightbox
+
+
 // Close lightbox au clic
 closeLightboxBtn.addEventListener("click", closeLightbox);
 function closeLightbox() {
     lightboxModal.style.display = "none";
+    lightboxModal.setAttribute("aria-hidden", "true");
 }
 
 
@@ -139,6 +152,7 @@ let slideIndex = 1;
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+
 
 // Thumbnail image controls
 function currentSlide(n) {

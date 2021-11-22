@@ -16,11 +16,13 @@ const messageInput = document.getElementById("messageInput"); //input message
 
 function launchModal() {
   contactModal.style.display = "block";
+  contactModal.setAttribute("aria-hidden", "false");
 }
 
 closeModalBtn.addEventListener("click", closeModal);//principale croix
 function closeModal() {
   contactModal.style.display = "none";
+  contactModal.setAttribute("aria-hidden", "true");
 }
 
 
@@ -112,7 +114,7 @@ function filterMedia(medias, type) {
           }
       });
     }
-    
+
     const sectionPhotographerMedias = document.getElementById("photographerMedias");
     let templatePhotographerMedias = ``;
     let photographerTotalLikes = 0;

@@ -16,6 +16,15 @@
         width: auto;
         margin: auto 0 16px;
     }
+    &__tag--phPage {
+        border: 0.5px solid #cacaca;
+        border-radius: 11px;
+        padding: 0px 8px;
+        margin: 0 5px 5px;
+    }
+    &__tag--phPage:last-child {
+        margin-right: 0;
+    }
 }
 @media screen and (max-width: 550px) {
     .photographer {

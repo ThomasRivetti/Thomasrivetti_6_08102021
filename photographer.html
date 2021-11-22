@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="header__logo">
+        <a href="index.html" class="header__logo" tabindex="1">
             <img src="./assets/img/Logo/logo.svg" alt="Fisheye Home Page">
         </a>
     </header>
@@ -21,7 +21,7 @@
         <section class="work">
             <div class="dropdown__filters">
                 <label for="dropdownMenu" class="dropdown__label">Triez par</label>
-                <select name="dropdownMenu" aria-label="Order by" id="dropdownMenu" class="dropdown__list">
+                <select name="dropdownMenu" aria-label="Order by" id="dropdownMenu" class="dropdown__list" tabindex="3">
                     <option value="popularity">Popularité</option>
                     <option value="date">Date</option>
                     <option value="title">Titre</option>
@@ -41,34 +41,34 @@
             </div>
         </div>
     </main>
-    <div id="contactModal" class="modal" role="dialog">
+    <div id="contactModal" class="modal" role="dialog" aria-hidden="true" aria-describedby="contact modal">
         <div class="modal__content">
             <header class="modal__header">
                 <h1 class="modal__title">
                     <span>Contactez-moi</span>
-                    <span id="modalPhotographerName"></span>
+                    <span id="modalPhotographerName" aria-label="photographer name"></span>
                 </h1>
                 <img id="closeModal" class="modal__close" src="./assets/img/components/closeModal.svg" alt="bouton de fermeture de la modale"/>
             </header>
             <form class="form">
                 <fieldset class="form__field">
                     <label for="firstnameInput" class="form__label">Prénom</label>
-                    <input type="text" name="firstname" id="firstnameInput" class="form__input" placeholder="Prénom">
+                    <input type="text" name="firstname" id="firstnameInput" class="form__input" placeholder="Prénom" aria-labelledby="first name">
                     <span id="firstNameError" class="form__error"></span>
                 </fieldset>
                 <fieldset class="form__field">
                     <label for="lastnameInput" class="form__label">Nom</label>
-                    <input type="text" name="lastname" id="lastnameInput" class="form__input" placeholder="Nom">
+                    <input type="text" name="lastname" id="lastnameInput" class="form__input" placeholder="Nom" aria-labelledby="last name">
                     <span id="lastNameError" class="form__error"></span>
                 </fieldset>
                 <fieldset class="form__field">
                     <label for="emailInput" class="form__label">Email</label>
-                    <input type="email" name="email" id="emailInput" class="form__input" placeholder="exemple@email.com">
+                    <input type="email" name="email" id="emailInput" class="form__input" placeholder="exemple@email.com" aria-labelledby="email">
                     <span id="emailError"  class="form__error"></span>
                 </fieldset>
                 <fieldset class="form__field">
                     <label for="messageInput" class="form__label">Votre message</label>
-                    <input type="text" name="message" id="messageInput" class="form__input form__input--msg" placeholder="Votre message">
+                    <input type="text" name="message" id="messageInput" class="form__input form__input--msg" placeholder="Votre message" aria-labelledby="message">
                     <span id="messageError" class="form__error"></span>
                 </fieldset>
                 <button id="sendBtn" class="modal__btn modal__btn--active">Envoyer</button>
@@ -76,15 +76,12 @@
         </div>
         
     </div>
-    <div id="lightboxModal" class="lightbox__modal">
+    <div id="lightboxModal" class="lightbox__modal" aria-hidden="true">
         <div class="lightbox__body" role="dialog">
             <button id="closeLightbox" class="fas fa-times lightbox__btn lightbox__btn--close" title="Close dialog"></button>
-            <button class="fas fa-chevron-left lightbox__btn lightbox__btn--left" onclick="plusSlides(-1)" title="Previous image"></button>
-            <button class="fas fa-chevron-right lightbox__btn lightbox__btn--right" onclick="plusSlides(1)" title="Next image"></button>
-            <div id="mediabox" class="lightbox__outerContainer">
-                <!-- <img src="./assets/img/Sample_Photos/Mimi/Animals_Rainbow.jpg" alt="Rainbow bird" role="button" class="lightbox__media">
-                <span id="mediaName" class="lightbox__mediaName"></span> -->
-            </div>            
+            <button id="leftControl" class="fas fa-chevron-left lightbox__btn lightbox__btn--left" onclick="plusSlides(-1)" title="Previous image"></button>
+            <button id="rightControl" class="fas fa-chevron-right lightbox__btn lightbox__btn--right" onclick="plusSlides(1)" title="Next image"></button>
+            <div id="mediabox" class="lightbox__outerContainer"></div>            
         </div>
     </div>
     <script src="./assets/js/main.js"></script>

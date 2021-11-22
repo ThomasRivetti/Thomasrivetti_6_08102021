@@ -109,7 +109,7 @@ const closeLightboxBtn = document.getElementById("closeLightbox");
 // Open lightbox
     //pression sur "ENTREE"
 lightboxOpen.onkeydown = function(e) {
-    if(e.keycode === 13) {
+    if(e.key == "Enter") {
         openLightbox()
     }
 }
@@ -119,9 +119,22 @@ function openLightbox() {
     lightboxModal.setAttribute("aria-hidden", "false");
 }
 
-//closeLightbox
-
-
+document.addEventListener('keyup', function(e) {
+    if(e.key == "Escape") {
+      if(lightboxModal.style.display == '' || lightboxModal.style.display == 'flex') {
+        closeLightbox();
+      }
+      if(contactModal.style.display == '' || contactModal.style.display == 'block') {
+        closeModal();
+      }
+    }
+    if(e.key == "ArrowLeft" && lightboxModal.style.display == 'flex') { // left
+      plusSlides(-1)
+    }
+    if(e.key == "ArrowRight" && lightboxModal.style.display == 'flex') { // right
+      plusSlides(1)
+    }
+  })
 // Close lightbox au clic
 closeLightboxBtn.addEventListener("click", closeLightbox);
 function closeLightbox() {

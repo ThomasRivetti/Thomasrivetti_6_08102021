@@ -22,6 +22,7 @@ function launchModal() {
   mainWrapper.setAttribute("aria-hidden", "true");
   mainWrapper.classList.add("modalFormOpenStyle");
   body.classList.add("no-scroll");
+  closeModalBtn.focus();
 }
 
 closeModalBtn.addEventListener("click", closeModal);//principale croix

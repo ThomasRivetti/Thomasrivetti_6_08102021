@@ -5,6 +5,8 @@ const regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-
 const regexMessage = /^[A-zÀ-ú0-9!@#$%^&*()\[\]{};'’`\-\\:,.\/<>?| ]{30,500}$/;
 
 //DOM
+const body = document.getElementById("body");
+const mainWrapper = document.getElementById("mainWrapper"); //contenu 
 const contactModal = document.getElementById("contactModal"); //modal
 const modalBtn = document.getElementById("openModalBtn"); //bouton ouverture modal
 const closeModalBtn = document.getElementById("closeModal"); //croix fermeture modal
@@ -17,12 +19,18 @@ const messageInput = document.getElementById("messageInput"); //input message
 function launchModal() {
   contactModal.style.display = "block";
   contactModal.setAttribute("aria-hidden", "false");
+  mainWrapper.setAttribute("aria-hidden", "true");
+  mainWrapper.classList.add("modalFormOpenStyle");
+  body.classList.add("no-scroll");
 }
 
 closeModalBtn.addEventListener("click", closeModal);//principale croix
 function closeModal() {
   contactModal.style.display = "none";
   contactModal.setAttribute("aria-hidden", "true");
+  mainWrapper.setAttribute("aria-hidden", "false");
+  mainWrapper.classList.remove("modalFormOpenStyle");
+  body.classList.remove("no-scroll");
 }
 
 
@@ -83,6 +91,7 @@ sendModalBtn.addEventListener("click", function(event) {
         console.log('Message : ' + messageInput.value);
         console.groupEnd();        
 })
+
 
 const dropdown = document.getElementById('dropdownMenu');
 dropdown.addEventListener('change', function(e) {

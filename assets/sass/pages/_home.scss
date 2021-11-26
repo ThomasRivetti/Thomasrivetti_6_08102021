@@ -49,7 +49,9 @@
     }
     &__tag a {
         transition: ease-in-out .3s;
-        &:hover, &.is-active {
+        &:hover, &.is-active, &:focus-visible {
+            border: 0.5px solid $primary-color;
+            outline: 0;
             background-color: $primary-color;
             color: white;
         }

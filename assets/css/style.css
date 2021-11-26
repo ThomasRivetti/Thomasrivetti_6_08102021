@@ -298,7 +298,9 @@ body {
 .header__tag a {
   transition: ease-in-out 0.3s;
 }
-.header__tag a:hover, .header__tag a.is-active {
+.header__tag a:hover, .header__tag a.is-active, .header__tag a:focus-visible {
+  border: 0.5px solid #911d1d;
+  outline: 0;
   background-color: #911d1d;
   color: white;
 }

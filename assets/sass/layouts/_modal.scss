@@ -36,6 +36,11 @@
     }
     &__input {
         height: 68px;
+        transition: ease-in-out .1s;
+        &:hover {
+            transform: scale(1.01);
+            border: 3px solid black;
+        }
         &--msg {
             height: 170px;
         }
@@ -55,10 +60,12 @@ opacity: 1;
 }
 .form__field[data-error-visible="true"] .form__input {
 border: 5px solid $primary-color;
+border-radius: 5px;
 background-color: lightgrey;
 }
 .form__field[data-error-visible="false"] .form__input {
 border: 5px solid green;
+border-radius: 5px;
 padding-left: 10px;
 }
 @media screen and (max-width: 860px) {

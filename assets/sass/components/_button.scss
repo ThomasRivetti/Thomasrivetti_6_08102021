@@ -7,9 +7,16 @@
         border: 0;
         color: inherit;
         font-size: inherit;
+        &:hover > i {
+            color: $secondary-color;
+            font-weight: bold;
+            transform: scale(1.1);
+            transition: ease-in-out .3s;
+        }
         &.is-pressed > i {
             color: $primary-color;
             font-weight: bold;
+            transform: scale(1.2);
         }
         & > i {
             pointer-events: none;
@@ -34,16 +41,25 @@
         &--close {
             background-color: transparent;
             border: transparent;
-            &:focus-visible {
+            border-radius: 5px;
+            height: fit-content;
+            padding: 10px;
+            transition: ease-in-out .3s;
+            &:focus-visible, &:hover {
                 background-color: $primary-color;
+                transform: scale(1.1);
             }
         }
         &--open:hover {
             background-color: $secondary-color;
             color: $color-dark;
+            transform: scale(1.1);
         }
         &--active:active {
             transform: scale(1.1);
+        }
+        &--toggle:hover { 
+            transform: scale(0.9);
         }
     }
 }

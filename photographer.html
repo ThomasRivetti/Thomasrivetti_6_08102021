@@ -22,9 +22,9 @@
             <div class="dropdown__filters">
                 <label for="dropdownMenu" class="dropdown__label">Triez par</label>
                 <select name="dropdownMenu" aria-label="Order by" id="dropdownMenu" class="dropdown__list" tabindex="3">
-                    <option value="popularity">Popularité</option>
-                    <option value="date">Date</option>
-                    <option value="title">Titre</option>
+                    <option value="popularity" class="dropdown__option">Popularité</option>
+                    <option value="date" class="dropdown__option">Date</option>
+                    <option value="title" class="dropdown__option">Titre</option>
                 </select>
             </div>
             <div id="photographerMedias" class="work__blocklist">
@@ -48,7 +48,7 @@
                     <span>Contactez-moi</span>
                     <span id="modalPhotographerName" aria-label="photographer name"></span>
                 </h1>
-                <button id="closeModal" class="modal__btn--close" tabindex="1"><img class="modal__close" src="./assets/img/components/closeModal.svg" alt="bouton de fermeture de la modale"/></button>
+                <button id="closeModal" class="modal__btn--close"><img class="modal__close" src="./assets/img/components/closeModal.svg" alt="bouton de fermeture de la modale"/></button>
             </header>
             <form class="form">
                 <fieldset class="form__field">
@@ -71,7 +71,7 @@
                     <input type="text" name="message" id="messageInput" class="form__input form__input--msg" placeholder="Votre message" aria-labelledby="messageInput">
                     <span id="messageError" class="form__error"></span>
                 </fieldset>
-                <button id="sendBtn" class="modal__btn modal__btn--active">Envoyer</button>
+                <button id="sendBtn" class="modal__btn modal__btn--active modal__btn--toggle">Envoyer</button>
             </form>
         </div>
         

@@ -1,5 +1,9 @@
 body {
     max-width: 1440px;
     margin: 8px auto;
-
+}
+*:focus-visible, a:hover {
+    outline: 3px solid $secondary-color;
+    background-color: lighten($primary-color, $amount: 70%);
+    border-radius: 5px;
 }

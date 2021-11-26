@@ -150,7 +150,7 @@ function createLightboxItems(jsonObj, id) {
     medias.forEach(media => {
         templateMediabox += `
         <div class="lightbox__innerContainer">
-            ${(media.image != undefined) ? `<img src="${media.image}" alt="${media.alt}" role="button" class="lightbox__media">` : `<video controls muted " class="work__video lightbox__media"><source src="${media.video}" type="video/mp4"></video>` }
+            ${(media.image != undefined) ? `<img alt="${media.alt}" src="${media.image}" role="button" class="lightbox__media">` : `<video controls muted " class="work__video lightbox__media"><source src="${media.video}" type="video/mp4"></video>` }
             <span class="lightbox__mediaName">${media.title}</span>
         </div>        
             `

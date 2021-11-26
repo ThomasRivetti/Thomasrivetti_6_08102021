@@ -571,6 +571,13 @@ body {
   cursor: pointer;
   transition: ease-in-out 0.3s;
 }
+.modal__btn--close {
+  background-color: transparent;
+  border: transparent;
+}
+.modal__btn--close:focus-visible {
+  background-color: #911d1d;
+}
 .modal__btn--open:hover {
   background-color: #db8876;
   color: black;

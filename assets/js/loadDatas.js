@@ -116,7 +116,7 @@ lightboxOpen.onkeydown = function(e) {
 
 function openLightbox() {
     lightboxModal.style.display = "flex";
-    lightboxModal.setAttribute("aria-hidden", "false");
+    lightboxModal.setAttribute("aria-hidden", "false"); 
 }
 
 document.addEventListener('keyup', function(e) {

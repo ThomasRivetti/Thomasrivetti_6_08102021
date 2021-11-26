@@ -23,15 +23,19 @@ function launchModal() {
   mainWrapper.classList.add("modalFormOpenStyle");
   body.classList.add("no-scroll");
   closeModalBtn.focus();
+  console.log("open");
 }
 
 closeModalBtn.addEventListener("click", closeModal);//principale croix
+
 function closeModal() {
   contactModal.style.display = "none";
   contactModal.setAttribute("aria-hidden", "true");
   mainWrapper.setAttribute("aria-hidden", "false");
   mainWrapper.classList.remove("modalFormOpenStyle");
+  console.log("close", closeModalBtn);
   body.classList.remove("no-scroll");
+  
 }
 
 
@@ -41,9 +45,11 @@ firstNameInput.addEventListener("blur", function(){
   if(regexFirstName.test(firstNameInput.value) == false) {
     firstNameError.innerText = "Le Prénom doit faire 2 lettres minimum";
     firstNameInput.parentElement.dataset.errorVisible = "true";
+    firstNameInput.setAttribute("aria-invalid", "true");
   } else {
       firstNameError.innerText = "";
       firstNameInput.parentElement.dataset.errorVisible = "false";
+      firstNameInput.setAttribute("aria-invalid", "false");
   } 
 })
 
@@ -53,9 +59,11 @@ lastNameInput.addEventListener("blur", function(){
   if(regexLastName.test(lastNameInput.value) == false) {
     lastNameError.innerText = "Le nom doit faire 2 lettres minimum";
     lastNameInput.parentElement.dataset.errorVisible = "true";
+    lastNameInput.setAttribute("aria-invalid", "true");
   } else {
       lastNameError.innerText = "";
       lastNameInput.parentElement.dataset.errorVisible = "false";
+      lastNameInput.setAttribute("aria-invalid", "false");
   } 
 })
 
@@ -65,9 +73,11 @@ emailInput.addEventListener("blur", function(){
   if(regexEmail.test(emailInput.value) == false) {
     emailError.innerText = "L'adresse mail n'est pas valide";
     emailInput.parentElement.dataset.errorVisible = "true";
+    emailInput.setAttribute("aria-invalid", "true");
   } else {
       emailError.innerText = "";
       emailInput.parentElement.dataset.errorVisible = "false";
+      emailInput.setAttribute("aria-invalid", "false");
     } 
   })
 
@@ -77,9 +87,11 @@ messageInput.addEventListener("blur", function(){
   if(regexMessage.test(messageInput.value) == false) {
     messageError.innerText = "Le message doit faire entre 30 et 500 caractères";
     messageInput.parentElement.dataset.errorVisible = "true";
+    lastNameInput.setAttribute("aria-invalid", "true");
   } else {
       messageError.innerText = "";
       messageInput.parentElement.dataset.errorVisible = "false";
+      messageInput.setAttribute("aria-invalid", "false");
     }
 })
 

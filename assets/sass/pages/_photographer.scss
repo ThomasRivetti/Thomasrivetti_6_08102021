@@ -5,6 +5,11 @@
     filter: blur(5px);
     z-index: 1;
 }
+.main {
+    &__wrapper {
+    padding-inline: 1.5rem;
+    }
+}
 
 .photographer {
     &__block--phPage {

@@ -417,6 +417,10 @@ body {
   z-index: 1;
 }
 
+.main__wrapper {
+  padding-inline: 1.5rem;
+}
+
 .photographer__block--phPage {
   display: flex;
   justify-content: space-between;

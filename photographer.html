@@ -10,7 +10,7 @@
 </head>
 <body id="body">
     <header class="header">
-        <a href="index.html" class="header__logo" tabindex="1">
+        <a href="index.html" class="header__logo">
             <img src="./assets/img/Logo/logo.svg" alt="Fisheye Home Page">
         </a>
     </header>
@@ -21,7 +21,7 @@
         <section class="work">
             <div class="dropdown__filters">
                 <label for="dropdownMenu" class="dropdown__label">Triez par</label>
-                <select name="dropdownMenu" aria-label="Order by" id="dropdownMenu" class="dropdown__list" tabindex="3">
+                <select name="dropdownMenu" aria-label="Order by" id="dropdownMenu" class="dropdown__list">
                     <option value="popularity" class="dropdown__option">Popularité</option>
                     <option value="date" class="dropdown__option">Date</option>
                     <option value="title" class="dropdown__option">Titre</option>
@@ -51,26 +51,26 @@
                 <button id="closeModal" class="modal__btn--close"><img class="modal__close" src="./assets/img/components/closeModal.svg" alt="bouton de fermeture de la modale"/></button>
             </header>
             <form class="form">
-                <fieldset class="form__field">
+                <div class="form__field">
                     <label for="firstnameInput" class="form__label">Prénom</label>
                     <input type="text" name="firstname" id="firstnameInput" class="form__input" placeholder="Prénom" aria-labelledby="firstnameInput">
                     <span id="firstNameError" class="form__error"></span>
-                </fieldset>
-                <fieldset class="form__field">
+                </div>
+                <div class="form__field">
                     <label for="lastnameInput" class="form__label">Nom</label>
                     <input type="text" name="lastname" id="lastnameInput" class="form__input" placeholder="Nom" aria-labelledby="lastnameInput">
                     <span id="lastNameError" class="form__error"></span>
-                </fieldset>
-                <fieldset class="form__field">
+                </div>
+                <div class="form__field">
                     <label for="emailInput" class="form__label">Email</label>
                     <input type="email" name="email" id="emailInput" class="form__input" placeholder="exemple@email.com" aria-labelledby="emailInput">
                     <span id="emailError"  class="form__error"></span>
-                </fieldset>
-                <fieldset class="form__field">
+                </div>
+                <div class="form__field">
                     <label for="messageInput" class="form__label">Votre message</label>
                     <input type="text" name="message" id="messageInput" class="form__input form__input--msg" placeholder="Votre message" aria-labelledby="messageInput">
                     <span id="messageError" class="form__error"></span>
-                </fieldset>
+                </div>
                 <button id="sendBtn" class="modal__btn modal__btn--active modal__btn--toggle">Envoyer</button>
             </form>
         </div>

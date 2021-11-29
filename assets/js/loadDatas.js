@@ -25,13 +25,13 @@ function showPhotographerCard(jsonObj, id) {
     const templatePhotographerCard = `
         <div class="photographer__info--phPage">
             <h1 class="photographer__name photographer__name--phPage">${photographer[0].name}</h1>
-            <p class="photographer__place photographer__place--phPage">${photographer[0].city}, ${photographer[0].country}</p>
+            <h2 class="photographer__place photographer__place--phPage">${photographer[0].city}, ${photographer[0].country}</h2>
             <p class="photographer__quote photographer__quote--phPage">${photographer[0].tagline}</p>
             <ul class="photographer__taglist photographer__taglist--phpage">
                 ${photographer[0].tags.map(tag => `<li class="photographer__tag photographer__tag--phPage">#${tag}</li>` ).join(" ")}              
             </ul>
         </div>
-        <button id="openModalBtn" class="modal__btn modal__btn--open" onclick="launchModal();" tabindex="2">Contactez-moi</button>
+        <button id="openModalBtn" class="modal__btn modal__btn--open" onclick="launchModal();">Contactez-moi</button>
         <img src="${photographer[0].portrait}" alt="photographie du profit de Mimi Keel" class="photographer__portrait photographer__portrait--phPage">`;
     sectionPhotographerCard.innerHTML = templatePhotographerCard;
     
@@ -62,13 +62,13 @@ function showPhotographerMedias(jsonObj, id) {
     medias.forEach((media, i) => {
         templatePhotographerMedias += `
             <article class="work__block">
-                <a href="#" class="work__imgcontainer" onclick="openLightbox()" tabindex="4" title="${media.alt}, s'ouvre dans l'album">
+                <a href="#" class="work__imgcontainer" onclick="openLightbox();currentSlide(${i+1})" title="${media.alt}, s'ouvre dans l'album">
                 ${MediaFactory.generateTag(media, i)}
                 </a>
                 <div class="work__legend">
-                    <h2 class="work__name">${media.title}</h2>
+                    <h3 class="work__name">${media.title}</h3>
                     <p class="work__likes">${media.likes}</p>
-                    <button role="button" tabindex="4" aria-pressed="false" onclick="addLike(event);" class="work__likeBtn" aria-label="liker"><i class="far fa-heart"></i></button>
+                    <button role="button" aria-pressed="false" onclick="addLike(event);" class="work__likeBtn" aria-label="liker"><i class="far fa-heart"></i></button>
                 </div>
             </article>`
         photographerTotalLikes += media.likes; 
@@ -116,9 +116,9 @@ lightboxOpen.onkeydown = function() {
 }
 
 function openLightbox() {
-    console.log(this.lightboxOpen);
     lightboxModal.style.display = "flex";
-    lightboxModal.setAttribute("aria-hidden", "false"); 
+    lightboxModal.setAttribute("aria-hidden", "false");
+    body.classList.add("no-scroll");
 }
 
 document.addEventListener('keyup', function(e) {
@@ -142,6 +142,8 @@ closeLightboxBtn.addEventListener("click", closeLightbox);
 function closeLightbox() {
     lightboxModal.style.display = "none";
     lightboxModal.setAttribute("aria-hidden", "true");
+    body.classList.remove("no-scroll");
+
 }
 
 

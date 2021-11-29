@@ -24,7 +24,6 @@ function launchModal() {
   body.classList.add("no-scroll");
   closeModalBtn.focus();
   closeModalBtn.classList.toggle("visible");
-  console.log("open");
 }
 
 closeModalBtn.addEventListener("click", closeModal);//principale croix
@@ -34,7 +33,6 @@ function closeModal() {
   contactModal.setAttribute("aria-hidden", "true");
   mainWrapper.setAttribute("aria-hidden", "false");
   mainWrapper.classList.remove("modalFormOpenStyle");
-  console.log("close", closeModalBtn);
   body.classList.remove("no-scroll");
   
 }

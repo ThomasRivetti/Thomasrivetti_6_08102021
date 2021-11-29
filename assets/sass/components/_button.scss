@@ -87,20 +87,21 @@
         border: transparent;
         color: $primary-color;
         font-size: $font-size-text*3;
+        cursor: pointer;
     }
 
     &__btn--close {
-        position: absolute;
-        right: 1rem;
-        top: 0.5rem;
+        position: fixed;
+        right: -10%;
+        top: 10%;
     }
     &__btn--left {
         left: -10%;
-        position: absolute;
+        position: fixed;
         top: 48%;
     }
     &__btn--right {
-        position: absolute;
+        position: fixed;
         right: -10%;
         top: 48%;   
     }

@@ -107,14 +107,16 @@ const lightboxOpen = document.querySelectorAll("openLightboxModal");
 const closeLightboxBtn = document.getElementById("closeLightbox");
 
 // Open lightbox
-    //pression sur "ENTREE"
-lightboxOpen.onkeydown = function(e) {
+    //pression sur "ENTREE"         
+lightboxOpen.onkeydown = function() {
     if(e.key == "Enter") {
-        openLightbox()
+        Event.preventDefault()
+        // openLightbox();
     }
 }
 
 function openLightbox() {
+    console.log(this.lightboxOpen);
     lightboxModal.style.display = "flex";
     lightboxModal.setAttribute("aria-hidden", "false"); 
 }

@@ -636,19 +636,20 @@ body {
   border: transparent;
   color: #911d1d;
   font-size: 4.8rem;
+  cursor: pointer;
 }
 .lightbox__btn--close {
-  position: absolute;
-  right: 1rem;
-  top: 0.5rem;
+  position: fixed;
+  right: -10%;
+  top: 10%;
 }
 .lightbox__btn--left {
   left: -10%;
-  position: absolute;
+  position: fixed;
   top: 48%;
 }
 .lightbox__btn--right {
-  position: absolute;
+  position: fixed;
   right: -10%;
   top: 48%;
 }
@@ -775,7 +776,7 @@ input[data-error]::after {
   height: 100%;
 }
 .lightbox__media {
-  height: 90%;
+  height: 85vh;
   object-fit: contain;
   width: 100%;
 }

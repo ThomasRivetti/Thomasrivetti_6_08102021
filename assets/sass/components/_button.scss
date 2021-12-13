@@ -88,6 +88,10 @@
         color: $primary-color;
         font-size: $font-size-text*3;
         cursor: pointer;
+        &:focus-visible, &:hover {
+            border-color    : $primary-color;
+            transform: scale(1.1);
+        }
     }
 
     &__btn--close {

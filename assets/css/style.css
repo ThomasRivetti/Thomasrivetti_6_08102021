@@ -642,6 +642,10 @@ body {
   font-size: 4.8rem;
   cursor: pointer;
 }
+.lightbox__btn:focus-visible, .lightbox__btn:hover {
+  border-color: #911d1d;
+  transform: scale(1.1);
+}
 .lightbox__btn--close {
   position: fixed;
   right: -10%;

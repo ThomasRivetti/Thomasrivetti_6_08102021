@@ -44,7 +44,7 @@ function showPhotographers(photographers) {
             <p class="photographer__quote photographer__quote--home">${photographer.tagline}</p>
             <p class="photographer__price">${photographer.price}€/jour</p>
             <ul class="photographer__taglist">
-            ${photographer.tags.map(tag => `<li class="photographer__tag"><a href="#" onclick="filterByTag(event, '${tag}');" aria-label="Triez les photographes sur le thème des portraits">#${tag}</a></li>` ).join(" ")}
+            ${photographer.tags.map(tag => `<li class="photographer__tag"><a href="#" onclick="filterByTag(event, '${tag}');" aria-label="Triez les photographes sur le thème des ${tag}">#${tag}</a></li>` ).join(" ")}
             </ul>
         </article>`
     }

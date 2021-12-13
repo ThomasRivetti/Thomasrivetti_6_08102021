@@ -135,7 +135,7 @@ sendModalBtn.addEventListener("click", function(event) {
 const dropdown = document.getElementById('dropdownMenu');
 dropdown.addEventListener('change', function(e) {
     const value = dropdown.value;
-    fetch('../../api/photographer.json')
+    fetch('https://thomasrivetti.github.io/Thomasrivetti_6_08102021/api/photographer.json')
         .then(response => response.json())
         .then(data => {
             const searchParams = new URLSearchParams(window.location.search);
